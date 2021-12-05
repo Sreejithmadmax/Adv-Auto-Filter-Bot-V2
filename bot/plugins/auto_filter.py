@@ -1,6 +1,8 @@
 import re
 import logging
 import asyncio
+import imdb
+import random
 
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
@@ -8,12 +10,26 @@ from pyrogram.errors import ButtonDataInvalid, FloodWait
 
 from bot.database import Database # pylint: disable=import-error
 from bot.bot import Bot # pylint: disable=import-error
-
+from bot.database.database import donlee_imdb
+from bot.database import IMDBCONTROL
 
 FIND = {}
 INVITE_LINK = {}
 ACTIVE_CHATS = {}
 db = Database()
+
+
+
+PHOTO = [
+    "https://telegra.ph/file/d9aa1692b7ac869bde140.jpg",
+    "https://telegra.ph/file/da2c698186e1f7ca04a83.jpg",
+    "https://telegra.ph/file/8b0dde8c92a81867fb663.jpg",
+    "https://telegra.ph/file/6dbab12c4eb44a6126e41.jpg",
+    "https://telegra.ph/file/c7f95b7c3872beb0a606a.jpg",
+    "https://telegra.ph/file/a16a23cb212450ca8670c.jpg"
+]
+
+
 
 @Bot.on_message(filters.text & filters.group & ~filters.bot, group=0)
 async def auto_filter(bot, update):
@@ -200,20 +216,62 @@ async def auto_filter(bot, update):
             
         reply_markup = InlineKeyboardMarkup(result[0])
 
+        year = 2021
+        for i in query.split():
+            try :
+                year = int(i)
+                query = query.replace(i,"")
+            except :
+                pass
+        for i in "movie malayalam english tamil kannada telugu subtitles esub esubs".split():
+            if i in query.lower().split():
+                query = query.replace(i,"")
+
         try:
-            await bot.send_message(
+            ia = IMDBCONTROL
+            my_movie=query
+            movies = ia.search_movie(my_movie)
+            #print(f"{movies[0].movieID} {movies[0]['title']}")
+            movie_url = movies[0].get_fullsizeURL()
+            imdb = await donlee_imdb(query)
+            await bot.send_photo(
+                photo=movie_url,
+                caption=f"""<b>🎬 Title :</b> <a href={imdb['url']}>{imdb.get('title')}
+<b>🎭 Genres :</b> {imdb.get('genres')}
+<b>📆 Release :</b> <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>
+<b>🌟 Rating :</b> <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10
+<b>🗳️ Votes :</b> <a href={imdb['url']}/votes>{imdb.get('votes')}</a>
+<b>⏱ RunTime :</b> {imdb.get('runtime')} Minutes
+<b>🗣️ Requested :</b> {update.from_user.mention}
+<b>🎙️ Languages :</b> {imdb.get('languages')}
+<b>🌎 Countries :</b> {imdb.get('country')}
+<b>🖋 StoryLine :</b> <code>{imdb.get('plot')} </code>
+<b>🔰 Group :</b> {update.chat.title}""",
+                reply_markup=reply_markup,
+                chat_id=update.chat.id,
+                reply_to_message_id=update.message_id,
+                parse_mode="html"
+            )
+
+        except Exception as e:
+          print(e)
+
+          try:
+              await bot.send_photo(
+                photo=f"{random.choice(PHOTO)}",
                 chat_id = update.chat.id,
-                text=f"Found {(len_results)} Results For Your Query: <code>{query}</code>",
+                caption=f"""📂 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {query}
+📍Requested :- {update.from_user.mention}
+⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [<a href='https://t.me/Autofiltergroup_bot'>𝓐𝓵𝓫𝓮𝓻𝓽 𝓔𝓲𝓷𝓼𝓽𝓮𝓲𝓷〽️©️</a>]
+🔰 Group : {update.chat.title}
+👮‍♂ ɴᴏᴛɪᴄᴇ : <code>ɪ𝙵 ʏᴏᴜ ᴅᴏ ɴᴏᴛ sᴇᴇ ᴛʜᴇ 𝙵ɪʟᴇ𝚂 ᴏ𝙵 ᴛʜɪ𝚂 ᴍᴏᴠɪᴇ ʏᴏᴜ ᴀ𝚂ᴋᴇᴅ 𝙵ᴏʀ . ʟᴏᴏᴋ ᴀᴛ ɴᴇ𝚇ᴛ ᴘᴀɢᴇ</code>""",
                 reply_markup=reply_markup,
                 parse_mode="html",
                 reply_to_message_id=update.message_id
             )
 
-        except ButtonDataInvalid:
-            print(result[0])
-        
-        except Exception as e:
-            print(e)
+          except ButtonDataInvalid:
+              print(result[0])
 
 
 async def gen_invite_links(db, group_id, bot, update):
