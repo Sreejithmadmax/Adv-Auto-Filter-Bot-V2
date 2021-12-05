@@ -28,44 +28,40 @@ async def start(bot, update):
             await update.reply_cached_media(
                 file_id,
                 quote=True,
-                caption = caption,
+                caption =f"<code><b> {file_name}</b> </code>\n<b>❤️Join [★Ⓜ️🌀𝚅𝙸𝙴𝚂_𝙲𝙻𝚄𝙱_𝟸⭕️𝟷𝟿™★] For New Movies.</b>\n❤️<u> 𝚃𝚑𝚊𝚗𝚔𝚢𝚘𝚞 𝙵𝚘𝚛 𝚄𝚜𝚒𝚗𝚐 𝙾𝚞𝚛 𝚂𝚎𝚛𝚟𝚒𝚌𝚎 𝙿𝚕𝚎𝚊𝚜𝚎 𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝚄𝚜 𝙱𝚢 𝚂𝚑𝚊𝚛𝚒𝚗𝚐 𝙾𝚞𝚛 𝙲𝚑𝚊𝚗𝚗𝚎𝚕/𝙶𝚛𝚘𝚞𝚙 𝙻𝚒𝚗𝚔 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙵𝚛𝚒𝚎𝚗𝚍𝚜</u> \n\n❁𝕁𝕠𝕚𝕟 𝕆𝕦𝕣 ℂ𝕙𝕒𝕟𝕟𝕖𝕝𝕤❁  \n⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱  \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @mcmarvels➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑 : @mcallmovies➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @mcnewmovies➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @MCmoviesall➻ \n",
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton
-                                (
-                                    'Developers', url="https://t.me/Mo_Tech_YT"
-                                )
-                        ]
-                    ]
-                )
-            )
+            [
+                [
+                    InlineKeyboardButton('𝑺𝑯𝑨𝑹𝑬', url="https://t.me/share/url?url=https://t.me/share/url?url=https://t.me/Movies_Club_2019")
+                ],
+                [
+                    InlineKeyboardButton('♻️𝐌𝐎𝐕𝐈𝐄𝐑𝐄𝐐', url="https://t.me/Movies_Club_2019"),
+                    InlineKeyboardButton('𝐒𝐄𝐑𝐈𝐄𝐒🔰', url="https://t.me/MoviesClubSeriesonly")
+                ],
+                [
+                    InlineKeyboardButton('〽️©◥ʟɨռӄʐʐ◤', url="https://t.me/Mclinkzz"),
+                    InlineKeyboardButton('𝐔𝐏𝐃𝐀𝐓𝐄📽️', url="https://t.me/ottmovies_updates")
+                ]
+            ]
+        )
+    )
         except Exception as e:
             await update.reply_text(f"<b>Error:</b>\n<code>{e}</code>", True, parse_mode="html")
             LOGGER(__name__).error(e)
         return
 
     buttons = [[
-        InlineKeyboardButton('👨‍💼 𝙼𝚊𝚜𝚝𝚎𝚛', url='https://t.me/MRK_YT'),
-        InlineKeyboardButton('𝙷𝚎𝚕𝚙 🤔', callback_data="help")
-    ],[
-        InlineKeyboardButton('🖥️ 𝚃𝚞𝚝𝚘𝚛𝚒𝚊𝚕 𝚅𝚒𝚍𝚎𝚘 🖥️', url='https://youtu.be/uAHl5jvnrhk')
-    ],[
-        InlineKeyboardButton('🗣️ 𝙰𝚗𝚢 𝙳𝚘𝚞𝚋𝚝', url='https://t.me/Mo_Tech_group'),
-        InlineKeyboardButton('𝚄𝚙𝚍𝚊𝚝𝚎𝚜 🤖', url='https://t.me/Mo_Tech_YT')
-    ],[
-        InlineKeyboardButton('💥 𝚂𝚞𝚋𝚜𝚌𝚛𝚒𝚋𝚎 𝙼𝚢 𝚈𝚘𝚞𝚃𝚞𝚋𝚎 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 💥', url='https://youtube.com/channel/UCmGBpXoM-OEm-FacOccVKgQ')
-   ]]
+        InlineKeyboardButton('Dev ✨️', url="https://t.me/Sanoob_Achu_18"),
+        InlineKeyboardButton('Help 💞', callback_data="help")
+    ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_message(
+    await bot.send_sticker(
         chat_id=update.chat.id,
-        text=Translation.START_TEXT.format(
-                update.from_user.first_name),
+        sticker= "CAACAgIAAxkBAAEBSqthkjttlt0G5Byj7Eq1qRucBVR0wQAC1AwAAnqLoEieLyIklDO8mx4E",
         reply_markup=reply_markup,
-        parse_mode="html",
         reply_to_message_id=update.message_id
     )
 
@@ -73,19 +69,16 @@ async def start(bot, update):
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
-        InlineKeyboardButton('🏠 𝙷𝚘𝚖𝚎', callback_data='start'),
-        InlineKeyboardButton('𝙰𝚋𝚘𝚞𝚝 🚩', callback_data='about')
-    ],[
-        InlineKeyboardButton('🔐 𝙲𝚕𝚘𝚜𝚎 🔐', callback_data='close')
+        InlineKeyboardButton('Home 🏘️', callback_data='start'),
+        InlineKeyboardButton('About 💔', callback_data='about')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_message(
+    await bot.send_sticker(
         chat_id=update.chat.id,
-        text=Translation.HELP_TEXT,
+        sticker= "CAACAgIAAxkBAAEBSp1hkjljLaP-qN6BNBV22JpfzhPV-wACzxEAAud1mUikiFSKzlb3ZB4E",
         reply_markup=reply_markup,
-        parse_mode="html",
         reply_to_message_id=update.message_id
     )
 
@@ -94,20 +87,14 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-        InlineKeyboardButton('👤 @𝙼𝚛𝚔_𝚈𝚃 👤', url='https://t.me/MRK_YT')
-    ],[
-        InlineKeyboardButton('👤 @𝙰𝚕𝚋𝚎𝚛𝚝𝙴𝚒𝚗𝚜𝚝𝚎𝚒𝚗𝚃𝙶 👤', url='https://t.me/AlbertEinstein_TG')
-    ],[
-        InlineKeyboardButton('🏠 𝙷𝚘𝚖𝚎', callback_data='start'),
-        InlineKeyboardButton('𝙲𝚕𝚘𝚜𝚎 🔐', callback_data='close')
+        InlineKeyboardButton('Home 🏘️', callback_data='start'),
+        InlineKeyboardButton('Close 💔', callback_data='close')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_message(
+    await bot.send_sticker(
         chat_id=update.chat.id,
-        text=Translation.ABOUT_TEXT,
+        sticker= "CAACAgIAAxkBAAEBSqNhkjmJai0tXFRHtq8fTXyYWcSJygACZg8AAlGwsEiUHH3OCPuZqR4E",
         reply_markup=reply_markup,
-        disable_web_page_preview=True,
-        parse_mode="html",
         reply_to_message_id=update.message_id
     )
