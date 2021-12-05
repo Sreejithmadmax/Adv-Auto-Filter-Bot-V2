@@ -97,11 +97,6 @@ async def cb_navg(bot, update: CallbackQuery):
         temp_results.append([
             InlineKeyboardButton(f"🚀 Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} 🚀", callback_data="ignore")
         ])      
-        result[0].append([
-                    InlineKeyboardButton('Ⓜ️𝙊𝙑𝙄𝙀𝙎', url='https://t.me/mcnewmovies'),
-                    InlineKeyboardButton('©️𝙎𝙀𝙍𝙄𝙀𝙎', url='https://t.me/MoviesClubSeriesonly')
-                ]
-            )
     
     if show_invite and int(index_val) !=0 :
         
