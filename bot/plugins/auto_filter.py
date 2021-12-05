@@ -76,6 +76,12 @@ async def auto_filter(bot, update):
     filters = await db.get_filters(group_id, query)
     
     if filters:
+        results.append(
+                [
+                    InlineKeyboardButton('Ⓜ️𝘼𝙄𝙉', url='https://t.me/joinchat/Qdw9ffZKXMxmMTg1'),
+                    InlineKeyboardButton('©️𝙃𝘼𝙉𝙉𝙀𝙇', url='https://t.me/filterv32')
+                ]
+            )
         for filter in filters: # iterating through each files
             file_name = filter.get("file_name")
             file_type = filter.get("file_type")
@@ -97,7 +103,7 @@ async def auto_filter(bot, update):
             file_size = "" if file_size == ("[0 B]") else file_size
             
             # add emoji down below inside " " if you want..
-            button_text = f"{file_size}{file_name}"
+            button_text = f"🎭{file_size}{file_name}"
             
 
             if file_type == "video":
@@ -142,25 +148,37 @@ async def auto_filter(bot, update):
             )
         
     else:
-        Send_message = await bot.send_message(
-            chat_id=update.chat.id,
-            text="<b>ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി (𝙐𝙨𝙚 𝙎𝙚𝙖𝙧𝙘𝙝 𝙜𝙤𝙤𝙜𝙡𝙚 𝘽𝙪𝙩𝙩𝙤𝙣)കണ്ടെത്തി അതുപോലെ ഗ്രൂപ്പിൽ അയക്കുക🔍അഥവാ കറക്റ്റ് സ്പെല്ലിങ്ങ് ആണെങ്കിൽ Contact Admin👉 @myfreak123 👈🥺</b>",
-            reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "Search In Google", url=f"https://google.com/search?q={query}" # URL
-                    )
-                ]
-            ]
-        ),
-            reply_to_message_id=update.message_id
-        )
-        await asyncio.sleep(10)
+        Send_message=await bot.send_video(
+                chat_id=update.chat.id,
+                video="https://telegra.ph/file/c2c0ff4b927dcc50e7922.mp4",
+                caption=f"<b>ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി (𝙐𝙨𝙚 𝙎𝙚𝙖𝙧𝙘𝙝 𝙜𝙤𝙤𝙜𝙡𝙚 𝘽𝙪𝙩𝙩𝙤𝙣)കണ്ടെത്തി അതുപോലെ ഗ്രൂപ്പിൽ അയക്കുക🔍അഥവാ കറക്റ്റ് സ്പെല്ലിങ്ങ് ആണെങ്കിൽ Use (𝘼𝙙𝙢𝙞𝙣) Button👍കൂടുതൽ അറിയാൻ വീഡിയോ കാണുക(25 Sec)</b>",
+                parse_mode="html",
+                reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton("🔍Search Google", url=f"https://google.com/search?q={query}Imdb")
+                            ],
+                            [
+                                InlineKeyboardButton('🎭 Request', url='https://t.me/MCrequestAccepter_bot'),
+                                InlineKeyboardButton('📃 Owner', url='https://t.me/Myfreak123')
+                            ],
+                            [
+                                InlineKeyboardButton('🎭 Reason', url='https://t.me/Reasonswhybro/7'),
+                                InlineKeyboardButton('📃 Admin', url='https://t.me/Sanoob_Achu_18')       
+                            ],
+                            [  
+                                InlineKeyboardButton('♻️Report A Problem♻️', url='https://t.me/Reasonswhybro/10')
+                            ]
+                        ]
+                    ),
+                reply_to_message_id=update.message_id
+            )
+        await asyncio.sleep(10) # in seconds
         await Send_message.delete()
+        # await bot.delete_messages(update.chat.id,update.message_id)
+        return  # return if no files found for that query
     
-
-    if len(results) == 0: # double check
+    if len(results) == 0:   # double check
         return
     
     else:
@@ -185,9 +203,12 @@ async def auto_filter(bot, update):
         # Just A Decaration
         result[0].append([
             InlineKeyboardButton(f"🔰 Page 1/{len_result if len_result < max_pages else max_pages} 🔰", callback_data="ignore")
-        ])
-        
-        
+        ])      
+        result[0].append([
+                    InlineKeyboardButton('Ⓜ️𝙊𝙑𝙄𝙀𝙎', url='https://t.me/mcnewmovies'),
+                    InlineKeyboardButton('©️𝙎𝙀𝙍𝙄𝙀𝙎', url='https://t.me/MoviesClubSeriesonly')
+                ]
+            )
         # if show_invite is True Append invite link buttons
         if show_invite:
             
