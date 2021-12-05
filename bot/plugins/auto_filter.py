@@ -142,28 +142,25 @@ async def auto_filter(bot, update):
             )
         
     else:
-        Send_message=await bot.send_message(
-                chat_id=update.chat.id,      
-                text=f"<b>ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി (𝙐𝙨𝙚 𝙎𝙚𝙖𝙧𝙘𝙝 𝙜𝙤𝙤𝙜𝙡𝙚 𝘽𝙪𝙩𝙩𝙤𝙣)കണ്ടെത്തി അതുപോലെ ഗ്രൂപ്പിൽ അയക്കുക🔍അഥവാ കറക്റ്റ് സ്പെല്ലിങ്ങ് ആണെങ്കിൽ Use (𝘼𝙙𝙢𝙞𝙣) Button👍കൂടുതൽ അറിയാൻ വീഡിയോ കാണുക(25 Sec)</b>",
-                parse_mode="html",
-                reply_markup=InlineKeyboardMarkup(
-                        [
-                            [
-                                InlineKeyboardButton("🔍Search Google🔎", url=f"https://google.com/search?q={query}Imdb")
-                            ],                        
-                            [  
-                                InlineKeyboardButton("♻️Request Admin♻️", url="https://t.me/Myfreak123")
-                            ]
-                        ]
-                    ),
-                reply_to_message_id=update.message_id
-            )
-        await asyncio.sleep(6) # in seconds
+        Send_message = await bot.send_message(
+            chat_id=update.chat.id,
+            text="<b>ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി (𝙐𝙨𝙚 𝙎𝙚𝙖𝙧𝙘𝙝 𝙜𝙤𝙤𝙜𝙡𝙚 𝘽𝙪𝙩𝙩𝙤𝙣)കണ്ടെത്തി അതുപോലെ ഗ്രൂപ്പിൽ അയക്കുക🔍അഥവാ കറക്റ്റ് സ്പെല്ലിങ്ങ് ആണെങ്കിൽ Contact Admin👉 @myfreak123 👈🥺</b>",
+            reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "Search In Google", url=f"https://google.com/search?q={query}" # URL
+                    )
+                ]
+            ]
+        ),
+            reply_to_message_id=update.message_id
+        )
+        await asyncio.sleep(10)
         await Send_message.delete()
-        # await bot.delete_messages(update.chat.id,update.message_id)
-        return  # return if no files found for that query
     
-    if len(results) == 0:   # double check
+
+    if len(results) == 0: # double check
         return
     
     else:
