@@ -95,8 +95,13 @@ async def cb_navg(bot, update: CallbackQuery):
 
     if not int(index_val) == 0:    
         temp_results.append([
-            InlineKeyboardButton(f"🔰 Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} 🔰", callback_data="ignore")
-        ])
+            InlineKeyboardButton(f"🚀 Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} 🚀", callback_data="ignore")
+        ])      
+        result[0].append([
+                    InlineKeyboardButton('Ⓜ️𝙊𝙑𝙄𝙀𝙎', url='https://t.me/mcnewmovies'),
+                    InlineKeyboardButton('©️𝙎𝙀𝙍𝙄𝙀𝙎', url='https://t.me/MoviesClubSeriesonly')
+                ]
+            )
     
     if show_invite and int(index_val) !=0 :
         
@@ -142,7 +147,7 @@ async def cb_navg(bot, update: CallbackQuery):
     
     reply_markup = InlineKeyboardMarkup(temp_results)
     
-    text=f"<i>Found</i> <code>{leng}</code> <i>Results For Your Query:</i> <code>{query}</code>"
+    text=f"<b>📂 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ :</b> <code>{query}</code>\n<b>🎭Requested:- {update.from_user.mention}</b>\n<b>🔔 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ : [<a href='https://t.me/mcnewmovies'>Ⓜ️©സിനിമകൾⓂ️©</a>]</b>\n<b>⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [<a href='https://t.me/Movies_Club_2019'>M🌀𝚅𝙸𝙴𝚂_𝙲𝙻𝚄𝙱</a>]</b>\n<b>👮‍♂ ɴᴏᴛɪᴄᴇ : <code>ɪ𝙵 ʏᴏᴜ ᴅᴏ ɴᴏᴛ sᴇᴇ ᴛʜᴇ 𝙵ɪʟᴇ𝚂 ᴏ𝙵 ᴛʜɪ𝚂 ᴍᴏᴠɪᴇ ʏᴏᴜ ᴀ𝚂ᴋᴇᴅ 𝙵ᴏʀ . ʟᴏᴏᴋ ᴀᴛ ɴᴇ𝚇ᴛ ᴘᴀɢᴇ</code></b>"
         
     try:
         await update.message.edit(
@@ -1639,16 +1644,9 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('👨‍💼 𝙼𝚊𝚜𝚝𝚎𝚛', url='https://t.me/MRK_YT'),
-            InlineKeyboardButton('𝙷𝚎𝚕𝚙 🤔', callback_data="help")
-        ],[
-            InlineKeyboardButton('🖥️ 𝚃𝚞𝚝𝚘𝚛𝚒𝚊𝚕 𝚅𝚒𝚍𝚎𝚘 🖥️', url='https://youtu.be/uAHl5jvnrhk')
-        ],[
-            InlineKeyboardButton('🗣️ 𝙰𝚗𝚢 𝙳𝚘𝚞𝚋𝚝', url='https://t.me/Mo_Tech_group'),
-            InlineKeyboardButton('𝚄𝚙𝚍𝚊𝚝𝚎𝚜 🤖', url='https://t.me/Mo_Tech_YT')
-        ],[
-            InlineKeyboardButton('💥 𝚂𝚞𝚋𝚜𝚌𝚛𝚒𝚋𝚎 𝙼𝚢 𝚈𝚘𝚞𝚃𝚞𝚋𝚎 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 💥', url='https://youtu.be/uAHl5jvnrhk')
-        ]]
+        InlineKeyboardButton('Dev ✨️', url="https://t.me/Sanoob_Achu_18"),
+        InlineKeyboardButton('Help 💞', callback_data="help")
+    ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
         
@@ -1662,11 +1660,9 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "help":
         buttons = [[
-            InlineKeyboardButton('Home ⚡', callback_data='start'),
-            InlineKeyboardButton('About 🚩', callback_data='about')
-        ],[
-            InlineKeyboardButton('Close 🔐', callback_data='close')
-        ]]
+        InlineKeyboardButton('Home 🏘️', callback_data='start'),
+        InlineKeyboardButton('About 💔', callback_data='about')
+    ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
         
@@ -1680,13 +1676,9 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "about": 
         buttons = [[
-            InlineKeyboardButton('👤 @𝙼𝚛𝚔_𝚈𝚃 👤', url='https://t.me/MRK_YT')
-        ],[
-            InlineKeyboardButton('𝙼𝚊𝚜𝚝𝚎𝚛 @𝙰𝚕𝚋𝚎𝚛𝚝𝙴𝚒𝚗𝚜𝚝𝚎𝚒𝚗𝚃𝙶', url='https://t.me/AlbertEinsteinTG')
-        ],[
-            InlineKeyboardButton('🏠 𝙷𝚘𝚖𝚎', callback_data='start'),
-            InlineKeyboardButton('𝙲𝚕𝚘𝚜𝚎 🔐', callback_data='close')
-        ]]
+        InlineKeyboardButton('Home 🏘️', callback_data='start'),
+        InlineKeyboardButton('Close 💔', callback_data='close')
+    ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
         
