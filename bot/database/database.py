@@ -1,3 +1,4 @@
+import re, os, pymongo, datetime, asyncio
 import motor.motor_asyncio # pylint: disable=import-error
 from bot import DB_URI
 from imdb import IMDb
@@ -505,8 +506,7 @@ class Database(metaclass=Singleton):
         """
         return await self.fcol.count_documents({"group_id": group_id})
 
-
-    async def donlee_imdb(query, bulk=False, id=False):
+async def donlee_imdb(query, bulk=False, id=False):
     if not id:
         # https://t.me/GetTGLink/4183
         pattern = re.compile(r"^(([a-zA-Z\s])*)?\s?([1-2]\d\d\d)?", re.IGNORECASE)
