@@ -28,7 +28,7 @@ async def start(bot, update):
             await update.reply_cached_media(
                 file_id,
                 quote=True,
-                caption =f"<code><b> {file_name}</b> </code>",
+                caption =f"<code><b> {file_name}</b> </code>\n<b>❤️Join [★Ⓜ️🌀𝚅𝙸𝙴𝚂_𝙲𝙻𝚄𝙱_𝟸⭕️𝟷𝟿™★] For New Movies.</b>\n❤️<u> 𝚃𝚑𝚊𝚗𝚔𝚢𝚘𝚞 𝙵𝚘𝚛 𝚄𝚜𝚒𝚗𝚐 𝙾𝚞𝚛 𝚂𝚎𝚛𝚟𝚒𝚌𝚎 𝙿𝚕𝚎𝚊𝚜𝚎 𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝚄𝚜 𝙱𝚢 𝚂𝚑𝚊𝚛𝚒𝚗𝚐 𝙾𝚞𝚛 𝙲𝚑𝚊𝚗𝚗𝚎𝚕/𝙶𝚛𝚘𝚞𝚙 𝙻𝚒𝚗𝚔 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙵𝚛𝚒𝚎𝚗𝚍𝚜</u> \n\n❁𝕁𝕠𝕚𝕟 𝕆𝕦𝕣 ℂ𝕙𝕒𝕟𝕟𝕖𝕝𝕤❁  \n⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱  \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @mcmarvels➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑 : @mcallmovies➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @mcnewmovies➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @MCmoviesall➻ \n",
                 parse_mode="html",
                 reply_markup=InlineKeyboardMarkup(
             [
@@ -52,7 +52,7 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('Dev ✨️', url="https://t.me/Dorakutty"),
+        InlineKeyboardButton('Dev ✨️', url="https://t.me/Myfreak123"),
         InlineKeyboardButton('Close 💔', callback_data='close')
     ]]
     
@@ -69,7 +69,7 @@ async def start(bot, update):
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
-        InlineKeyboardButton('Dev ✨️', url="https://t.me/Dorakutty"),
+        InlineKeyboardButton('Dev ✨️', url="https://t.me/Myfreak123"),
         InlineKeyboardButton('Close 💔', callback_data='close')
     ]]
     
@@ -87,7 +87,7 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-        InlineKeyboardButton('Dev ✨️', url="https://t.me/Dorakutty"),
+        InlineKeyboardButton('Dev ✨️', url="https://t.me/Myfreak123"),
         InlineKeyboardButton('Close 💔', callback_data='close')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
