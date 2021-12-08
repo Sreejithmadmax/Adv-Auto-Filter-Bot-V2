@@ -1608,7 +1608,7 @@ async def cb_about(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "My Dev ⚡", url="https://t.me/MRK_YT"
+                    "My Dev ⚡", url="https://t.me/Myfreak123"
                 ),
                 
             InlineKeyboardButton
@@ -1639,7 +1639,7 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-        InlineKeyboardButton('Dev ✨️', url="https://t.me/Dorakutty"),
+        InlineKeyboardButton('Dev ✨️', url="https://t.me/Myfreak123"),
         InlineKeyboardButton('Help 💞', callback_data="help")
     ]]
     
@@ -1655,7 +1655,7 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "help":
         buttons = [[
-        InlineKeyboardButton('Dev ✨️', url="https://t.me/Dorakutty"),
+        InlineKeyboardButton('Dev ✨️', url="https://t.me/Myfreak123"),
         InlineKeyboardButton('Help 💞', callback_data="help")
     ]]
     
@@ -1671,7 +1671,7 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "about": 
         buttons = [[
-        InlineKeyboardButton('Dev ✨️', url="https://t.me/Dorakutty"),
+        InlineKeyboardButton('Dev ✨️', url="https://t.me/Myfreak123"),
         InlineKeyboardButton('Help 💞', callback_data="help")
     ]]
         
