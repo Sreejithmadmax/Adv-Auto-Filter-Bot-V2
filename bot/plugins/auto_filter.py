@@ -158,7 +158,7 @@ async def auto_filter(bot, update):
 
         )
 
-        await asyncio.sleep(26)
+        await asyncio.sleep(27)
 
         await Send_message.delete()
     
