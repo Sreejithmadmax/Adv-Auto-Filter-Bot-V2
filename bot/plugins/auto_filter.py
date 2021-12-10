@@ -78,8 +78,7 @@ async def auto_filter(bot, update):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton('Ⓜ️𝘼𝙄𝙉', url='https://t.me/joinchat/Qdw9ffZKXMxmMTg1'),
-                    InlineKeyboardButton('©️𝙃𝘼𝙉𝙉𝙀𝙇', url='https://t.me/filterv32')
+                    InlineKeyboardButton('🔰𝙼𝙰𝙸𝙽 𝙲𝙷𝙰𝙽𝙽𝙴𝙻🔰', url='https://t.me/+IK2aZWUBgjkwMjFl')
                 ]
             )
         for filter in filters: # iterating through each files
@@ -103,7 +102,7 @@ async def auto_filter(bot, update):
             file_size = "" if file_size == ("[0 B]") else file_size
             
             # add emoji down below inside " " if you want..
-            button_text = f"🎭{file_size}{file_name}"
+            button_text = f"🔰{file_size}{file_name}"
             
 
             if file_type == "video":
@@ -190,8 +189,8 @@ async def auto_filter(bot, update):
             InlineKeyboardButton(f"🔰 Page 1/{len_result if len_result < max_pages else max_pages} 🔰", callback_data="ignore")
         ])      
         result[0].append([
-                    InlineKeyboardButton('Ⓜ️𝙊𝙑𝙄𝙀𝙎', url='https://t.me/mcnewmovies'),
-                    InlineKeyboardButton('©️𝙎𝙀𝙍𝙄𝙀𝙎', url='https://t.me/MoviesClubSeriesonly')
+                    InlineKeyboardButton('🔰 𝙼𝙾𝚅𝙸𝙴𝚂 🔰', url='https://t.me/mcnewmovies'),
+                    InlineKeyboardButton('🔰𝚂𝙴𝚁𝙸𝙴𝚂🔰', url='https://t.me/MoviesClubSeriesonly')
                 ]
             )
         # if show_invite is True Append invite link buttons
