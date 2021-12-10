@@ -152,7 +152,7 @@ async def auto_filter(bot, update):
 
             chat_id=update.chat.id,
 
-            text="<b>Couldn't Find This Movie.Try Again ⚠️\n ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക \nSpelling Correct ആണെങ്കിൽ Contact Admin \n👉 @myfreak123 👈</b>",
+            text="<b>Couldn't Find This Movie.Try Again ⚠️\n ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക \nSpelling Correct ആണെങ്കിൽ Contact Admin \n👉 @BlinderTG 👈</b>",
 
             reply_to_message_id=update.message_id
 
