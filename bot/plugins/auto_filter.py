@@ -78,8 +78,8 @@ async def auto_filter(bot, update):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton('🔰𝙼𝙾𝚅𝙸𝙴𝚂🔰', url='https://t.me/mcnewmovies'),
-                    InlineKeyboardButton('🔰𝚂𝙴𝚁𝙸𝙴𝚂🔰', url='https://t.me/MoviesClubSeriesonly')
+                    InlineKeyboardButton('🔰𝙰𝙽𝙸𝙼𝙴🔰', url='https://t.me/MCanimes'),
+                    InlineKeyboardButton('🔰𝙻𝙸𝙽𝙺𝚉🔰', url='https://t.me/Mclinkzz')
                 ]
             )
         for filter in filters: # iterating through each files
@@ -93,11 +93,11 @@ async def auto_filter(bot, update):
             if file_size < 1024:
                 file_size = f"[{file_size} B]"
             elif file_size < (1024**2):
-                file_size = f"[{str(round(file_size/1024, 2))} KB] "
+                file_size = f"[{str(round(file_size/1024, 2))}KB] "
             elif file_size < (1024**3):
-                file_size = f"[{str(round(file_size/(1024**2), 2))} MB] "
+                file_size = f"[{str(round(file_size/(1024**2), 2))}MB] "
             elif file_size < (1024**4):
-                file_size = f"[{str(round(file_size/(1024**3), 2))} GB] "
+                file_size = f"[{str(round(file_size/(1024**3), 2))}GB] "
             
             
             file_size = "" if file_size == ("[0 B]") else file_size
