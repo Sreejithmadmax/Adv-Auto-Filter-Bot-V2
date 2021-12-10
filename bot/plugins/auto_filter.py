@@ -158,7 +158,7 @@ async def auto_filter(bot, update):
 
         )
 
-        await asyncio.sleep(27)
+        await asyncio.sleep(10)
 
         await Send_message.delete()
     
@@ -181,7 +181,7 @@ async def auto_filter(bot, update):
         if len_result != 1:
             result[0].append(
                 [
-                    InlineKeyboardButton("Next⏩", callback_data=f"navigate(0|next|{query})")
+                    InlineKeyboardButton("🔰 𝙽𝚎𝚡𝚝 🔰", callback_data=f"navigate(0|next|{query})")
                 ]
             )
         
