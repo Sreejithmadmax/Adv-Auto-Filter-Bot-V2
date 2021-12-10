@@ -1,13 +1,10 @@
 import re
 import time
 import asyncio
-import imdb
+
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
-
-from bot.database.database import donlee_imdb
-from bot.database import IMDBCONTROL
 
 from bot import start_uptime, Translation, VERIFY # pylint: disable=import-error
 from bot.plugins.auto_filter import ( # pylint: disable=import-error
@@ -148,17 +145,11 @@ async def cb_navg(bot, update: CallbackQuery):
     ia = IMDBCONTROL
     imdb = await donlee_imdb
 
-    text=f"<b>🎬 Title :</b> <a href={imdb['url']}>{imdb.get('title')}</a>
-<b>🎭 Genres :</b> {imdb.get('genres')}
-<b>📆 Release :</b> <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a>
-<b>🌟 Rating :</b> <a href={imdb['url']}/ratings>{imdb.get('rating')}</a> / 10
-<b>🗳️ Votes :</b> <a href={imdb['url']}/votes>{imdb.get('votes')}</a>
-<b>⏱ RunTime :</b> {imdb.get('runtime')} Minutes
-<b>🗣️ Requested :</b> {update.from_user.mention}
-<b>🎙️ Languages :</b> {imdb.get('languages')}
-<b>🌎 Countries :</b> {imdb.get('country')}
-<b>🔰 Group :</b> {update.chat.title}
-<b>🖋 StoryLine :</b> <code>{imdb.get('plot')} </code>""
+    text=f"📂 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {query}
+📍Requested :- {update.from_user.mention}
+⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [<a href='https://t.me/Autofiltergroup_bot'>𝓐𝓵𝓫𝓮𝓻𝓽 𝓔𝓲𝓷𝓼𝓽𝓮𝓲𝓷〽️©️</a>]
+🔰 Group : {update.chat.title}
+👮‍♂ ɴᴏᴛɪᴄᴇ : <code>ɪ𝙵 ʏᴏᴜ ᴅᴏ ɴᴏᴛ sᴇᴇ ᴛʜᴇ 𝙵ɪʟᴇ𝚂 ᴏ𝙵 ᴛʜɪ𝚂 ᴍᴏᴠɪᴇ ʏᴏᴜ ᴀ𝚂ᴋᴇᴅ 𝙵ᴏʀ . ʟᴏᴏᴋ ᴀᴛ ɴᴇ𝚇ᴛ ᴘᴀɢᴇ</code>"
         
     try:
         await update.message.edit(
