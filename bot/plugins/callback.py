@@ -142,7 +142,7 @@ async def cb_navg(bot, update: CallbackQuery):
     
     reply_markup = InlineKeyboardMarkup(temp_results)
 
-    text=f"📂 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {query}\n📍Requested :- {update.from_user.mention}\n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [<a href='https://t.me/Autofiltergroup_bot'>𝓐𝓵𝓫𝓮𝓻𝓽 𝓔𝓲𝓷𝓼𝓽𝓮𝓲𝓷〽️©️</a>]\n🔰 Group : {update.chat.title}\n👮‍♂ ɴᴏᴛɪᴄᴇ : <code>ɪ𝙵 ʏᴏᴜ ᴅᴏ ɴᴏᴛ sᴇᴇ ᴛʜᴇ 𝙵ɪʟᴇ𝚂 ᴏ𝙵 ᴛʜɪ𝚂 ᴍᴏᴠɪᴇ ʏᴏᴜ ᴀ𝚂ᴋᴇᴅ 𝙵ᴏʀ . ʟᴏᴏᴋ ᴀᴛ ɴᴇ𝚇ᴛ ᴘᴀɢᴇ</code>"
+    text=f"📂 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {query}\n📍Requested :- {update.from_user.mention}\n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [<a href='https://t.me/Autofiltergroup_bot'>𝓐𝓵𝓫𝓮𝓻𝓽 𝓔𝓲𝓷𝓼𝓽𝓮𝓲𝓷〽️©️</a>]\n👮‍♂ ɴᴏᴛɪᴄᴇ : <code>ɪ𝙵 ʏᴏᴜ ᴅᴏ ɴᴏᴛ sᴇᴇ ᴛʜᴇ 𝙵ɪʟᴇ𝚂 ᴏ𝙵 ᴛʜɪ𝚂 ᴍᴏᴠɪᴇ ʏᴏᴜ ᴀ𝚂ᴋᴇᴅ 𝙵ᴏʀ . ʟᴏᴏᴋ ᴀᴛ ɴᴇ𝚇ᴛ ᴘᴀɢᴇ</code>"
         
     try:
         await update.message.edit(
