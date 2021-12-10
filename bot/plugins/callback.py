@@ -146,11 +146,7 @@ async def cb_navg(bot, update: CallbackQuery):
     reply_markup = InlineKeyboardMarkup(temp_results)
 
     ia = IMDBCONTROL
-            my_movie=query
-            movies = ia.search_movie(my_movie)
-            #print(f"{movies[0].movieID} {movies[0]['title']}")
-            movie_url = movies[0].get_fullsizeURL()
-            imdb = await donlee_imdb(query)
+    imdb = await donlee_imdb
 
     text=f"<b>🎬 Title :</b> <a href={imdb['url']}>{imdb.get('title')}</a>
 <b>🎭 Genres :</b> {imdb.get('genres')}
