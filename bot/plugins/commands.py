@@ -4,7 +4,8 @@
 
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
-from bot import Translation, LOGGER # pylint: disable=import-error
+from pyrogram.errors import UserNotParticipant
+from bot import Translation # pylint: disable=import-error
 from bot.database import Database # pylint: disable=import-error
 
 db = Database()
@@ -18,6 +19,36 @@ async def start(bot, update):
         file_uid = False
     
     if file_uid:
+        try:
+            member = await bot.get_chat_member(-1001569614628, update.chat.id)
+            if member.status == "kicked":
+                await bot.send_message(
+                       chat_id=update.chat.id,
+                       text="Sorry Brooh🤣!  You're  B A N N E D 🥱 Contact Admin @Myfreak123",
+                       reply_to_message_id=update.message_id
+                       )
+                return
+        
+        except UserNotParticipant:
+            me = await bot.get_me()
+            await bot.send_message(
+                    chat_id=update.chat.id,
+                    text="You Need To Join Our Channel and Press Refresh Button to get the file.\n ചാനലിൽ ജോയിൻ ചെയ്ത ശേഷം Refresh ബട്ടൺ ക്ലിക്ക് ചെയ്ത് സ്റ്റാർട്ട്‌ കൊടുക്കുക ഫയൽ ലഭിക്കുന്നതാണ്✌️💗",
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Ⓜ️Join Channel ©️",url="https://t.me/+IK2aZWUBgjkwMjFl")],
+                                                       [InlineKeyboardButton(text="Ⓜ️ Refresh ©️", url=f"https://t.me/{me.username}?start={file_uid}")]]),
+                    reply_to_message_id=update.message_id
+                    )
+            return
+        
+        except Exception:
+            print('Unable to Verify')
+            await bot.send_message(
+                     chat_id=update.chat.id,
+                     text="```Something Went Wrong Contact Admin @Myfreak123```",
+                     parse_mode='markdown',
+                     reply_to_message_id=update.message_id
+                     )
+            return
         file_id, file_name, file_caption, file_type = await db.get_file(file_uid)
         
         if (file_id or file_type) == None:
@@ -46,9 +77,10 @@ async def start(bot, update):
             ]
         )
     )
-        except Exception as e:
-            await update.reply_text(f"<b>Error:</b>\n<code>{e}</code>", True, parse_mode="html")
-            LOGGER(__name__).error(e)
+
+        else:
+            print(file_type)
+        
         return
 
     buttons = [[
