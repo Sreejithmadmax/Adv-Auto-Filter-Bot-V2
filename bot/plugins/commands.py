@@ -20,11 +20,11 @@ async def start(bot, update):
     
     if file_uid:
         try:
-            member = await bot.get_chat_member(-1001372299086, update.chat.id)
+            member = await bot.get_chat_member(-1001569614628, update.chat.id)
             if member.status == "kicked":
                 await bot.send_message(
                        chat_id=update.chat.id,
-                       text="Sorry mate!  You're  B A N N E D 🥱",
+                       text="Sorry mate!🤣  You're  B A N N E D 🥱 Contact Admin",
                        reply_to_message_id=update.message_id
                        )
                 return
@@ -33,7 +33,7 @@ async def start(bot, update):
             me = await bot.get_me()
             await bot.send_message(
                     chat_id=update.chat.id,
-                    text="You Need To Join Our Channel and Press Refresh Button to get the file.",
+                    text="🔰You Need To Join Our Channel and Press Refresh Button to get the file.🔰ചാനലിൽ ജോയിൻ ചെയ്ത് Refresh കൊടുത്ത് start കൊടുക്കുക💗",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Join Channel",url="https://t.me/joinchat/+IK2aZWUBgjkwMjFl")],
                                                        [InlineKeyboardButton(text="Refresh", url=f"https://t.me/{me.username}?start={file_uid}")]]),
                     reply_to_message_id=update.message_id
