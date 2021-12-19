@@ -12,7 +12,7 @@ from bot.database import Database # pylint: disable=import-error
 from bot.bot import Bot # pylint: disable=import-error
 from bot.database.database import donlee_imdb
 from bot.database import IMDBCONTROL
-
+from bot.Simple_Config import Mo_Tech_YT
 FIND = {}
 INVITE_LINK = {}
 ACTIVE_CHATS = {}
@@ -37,7 +37,38 @@ async def auto_filter(bot, update):
     A Funtion To Handle Incoming Text And Reply With Appropriate Results
     """
     group_id = update.chat.id
+    the_query = update.text
+    query = re.sub(r"[1-2]\d{3}", "", update.text) # Targetting Only 1000 - 2999 😁
+    tester = 2
+    
+    for i in Mo_Tech_YT.MO_TECH_YT_05 :
+       if i in the_query.split() :
+          for a in Mo_Tech_YT.MO_TECH_YT_08 :
+             if a in the_query.split() :
+                tester = 0
+                break
+             else :
+                tester = 1
+       if tester==0 :
+          break
+                
+    if tester==1 :
+        Send_message = await bot.send_message(
 
+            chat_id=update.chat.id,
+
+            text="<b>സിനിമയുടെ പേര് മാത്രം അയക്കൂ സുഹൃത്തേ🙏\nPlease Sent Movie Name Only🤧 Dub Multi തുടങ്ങിയവ അതിൽ തന്നെ കാണും\n Or Contact @BlinderTG....</b>",
+
+            reply_to_message_id=update.message_id
+
+        )
+
+        await asyncio.sleep(10)
+
+        await Send_message.delete()
+        # await bot.delete_messages(update.chat.id,update.message_id)
+        return
+        
     if re.findall(r"((^\/|^,|^\.|^[\U0001F600-\U000E007F]).*)", update.text):
         return
     
@@ -152,7 +183,7 @@ async def auto_filter(bot, update):
 
             chat_id=update.chat.id,
 
-            text="<b>Couldn't Find This Movie.Try Again ⚠️\n ഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക \nSpelling Correct ആണെങ്കിൽ Contact Admin \n👉 @BlinderTG 👈</b>",
+            text="<b>Couldn't Find This Movie.Try Again ⚠️\nഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക Spelling Correct ആണെങ്കിൽ \nContact Admin 👉 @BlinderTG 👈</b>",
 
             reply_to_message_id=update.message_id
 
