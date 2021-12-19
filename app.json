@@ -23,6 +23,14 @@
             "description": "Your Bot Token From @BotFather",
             "value": ""
         },
+        "EXPELL": {
+            "description": "The words if contained should be rejected",
+            "value": "Link Undo undo sent Sent malayalam tamil hindi telugu kannada Malayalam Tamil Hindi Telugu Kannada Movie movie"
+        },
+        "IN_EXPELL": {
+           "description": "The words in Expelled you're okay with",
+           "value": "scary Scary emoji Emoji"
+        },
         "DB_URI": {
             "description": "Your Mongo DB URL Obtained From mongodb.com",
             "value": ""
