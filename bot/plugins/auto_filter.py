@@ -179,19 +179,7 @@ async def auto_filter(bot, update):
             )
         
     else:
-        Send_message = await bot.send_message(
-
-            chat_id=update.chat.id,
-
-            text="<b>Couldn't Find This Movie.Try Again ⚠️\nഈ സിനിമയുടെ ഒറിജിനൽ പേര് ഗൂഗിളിൽ പോയി കണ്ടെത്തി അതുപോലെ ഇവിടെ കൊടുക്കുക Spelling Correct ആണെങ്കിൽ \nContact Admin 👉 @BlinderTG 👈</b>",
-
-            reply_to_message_id=update.message_id
-
-        )
-
-        await asyncio.sleep(10)
-
-        await Send_message.delete()
+        return # return if no files found for that query
     
 
     if len(results) == 0: # double check
