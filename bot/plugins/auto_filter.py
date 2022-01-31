@@ -109,12 +109,12 @@ async def auto_filter(bot, update):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton(f"🔮{query}🔮", callback_data="queryfilmname")
+                    InlineKeyboardButton(f"🔮{query}🔮", callback_data="ignore")
                 ]
             ) 
 
         results.append([
-                    InlineKeyboardButton("🔅Size🔅", callback_data="ignore"),
+                    InlineKeyboardButton("🔅Trick🔅", callback_data="queryfilmname"),
                     InlineKeyboardButton("🔅Tips🔅", callback_data="instructions")
                 ]
             )
@@ -183,10 +183,31 @@ async def auto_filter(bot, update):
             )
         
     else:
-        return # return if no files found for that query
+        Send_message=await bot.send_video(
+                chat_id=update.chat.id,
+                video="https://telegra.ph/file/c2c0ff4b927dcc50e7922.mp4",
+                caption=f"<b>കൂടുതൽ അറിയാൻ വീഡിയോ കാണുക(25 Sec)Watch Video👆</b>",
+                parse_mode="html",
+                reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton("🔍Search Google", url=f"https://google.com/search?q={query}Imdb")
+                            ],                     
+                            [
+                                InlineKeyboardButton("🎭 Reason", callback_data="spellcheck"),
+                                InlineKeyboardButton('📃 Report To Admin', url='https://t.me/UrvashiTheatersAdmin_Bot')       
+                            ]
+                          
+                        ]
+                    ),
+                reply_to_message_id=update.message_id
+            )
+        await asyncio.sleep(2) # in seconds
+        await Send_message.delete()
+        # await bot.delete_messages(update.chat.id,update.message_id)
+        return  # return if no files found for that query
     
-
-    if len(results) == 0: # double check
+    if len(results) == 0:   # double check
         return
     
     else:
@@ -211,11 +232,11 @@ async def auto_filter(bot, update):
         # Just A Decaration
         result[0].append([
                     InlineKeyboardButton(f"🔰Page 1/{len_result if len_result < max_pages else max_pages}🔰", callback_data="ignore"),
-                    InlineKeyboardButton("⚠️Dont Do⚠️", callback_data="ignore")
+                    InlineKeyboardButton("⚠️Dont Do⚠️", callback_data="querydonttouch")
                 ]
             )
         result[0].append([            
-                    InlineKeyboardButton(f'🔰{update.chat.title}🔰', url='https://t.me/UrvashiTheaters')
+                    InlineKeyboardButton(f'{update.chat.title}', url='https://t.me/UrvashiTheaters')
                 ]
             )
         # if show_invite is True Append invite link buttons
