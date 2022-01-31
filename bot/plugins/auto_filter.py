@@ -109,8 +109,8 @@ async def auto_filter(bot, update):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton("🔰Size🔰", callback_data="ignore"),
-                    InlineKeyboardButton("🔰Film Name🔰", callback_data="ignore")
+                    InlineKeyboardButton("🔮Size👇", callback_data="ignore"),
+                    InlineKeyboardButton("👇Film Name🔮", callback_data="ignore")
                 ]
             )
         for filter in filters: # iterating through each files
