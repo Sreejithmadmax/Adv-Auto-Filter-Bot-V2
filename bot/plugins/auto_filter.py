@@ -108,11 +108,11 @@ async def auto_filter(bot, update):
     
     if filters:
         results.append[[
-        InlineKeyboardButton('👨‍💼Creater', url=f'https://t.me/{MRK_YT_MASTER}'),
-        InlineKeyboardButton('Help 🤔', callback_data="help")
+        InlineKeyboardButton('👨‍💼Creater', url='https://t.me/blindertg'),
+        InlineKeyboardButton('Help 🤔', url='https://t.me/blindertg')
     ],[
-        InlineKeyboardButton('🗣️Group', url=f'{MT_GROUP}'),
-        InlineKeyboardButton('Channel🔊', url=f'{MT_CHANNEL}')
+        InlineKeyboardButton('🗣️Group', url='https://t.me/blindertg'),
+        InlineKeyboardButton('Channel🔊', url='https://t.me/blindertg')
     ],[
         InlineKeyboardButton('🖥️ Tutorial Video 🖥️', url='https://youtu.be/OTqZmADyOjU')
     ]]
