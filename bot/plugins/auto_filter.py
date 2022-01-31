@@ -107,7 +107,7 @@ async def auto_filter(bot, update):
     filters = await db.get_filters(group_id, query)
     
     if filters:
-        result[0].append([
+        results.append([
                     InlineKeyboardButton("🔮Size🔮", callback_data="ignore"),
                     InlineKeyboardButton("🔮Cinema🔮", callback_data="ignore"),
                     InlineKeyboardButton("🔮Size🔮", callback_data="ignore")
