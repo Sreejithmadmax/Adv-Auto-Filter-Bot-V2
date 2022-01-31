@@ -1546,7 +1546,7 @@ async def my_instructs(bot, update: CallbackQuery):
    global VERIFY
    chat_id = update.message.chat.id
    user_id = update.from_user.id
-   await update.answer("Check if your spelling is correct first and then try adding the year and quality of the movie 😉. If you still didn'get your movie add the language 😁. If there is no result it just is'nt available 😌.", show_alert=True)
+   await update.answer("hiii", show_alert=True)
    return
 
 @Client.on_callback_query(filters.regex(r"status\((.+)\)"), group=2)
@@ -1693,7 +1693,7 @@ async def callback_data(bot, update: CallbackQuery):
 
 
     elif query_data == "help_me":
-        await update.answer("Do not add the word MOVIE with your movie name 😉.\nദയവ് ചെയ്ത് സിനിമയുടെ പേരിന്റെ കൂടെ Movie എന്ന വാക്ക് ഇടരുത് 😝.", show_alert=True)
+        await update.answer("Do", show_alert=True)
 
     elif query_data == "close":
         await update.message.delete()
