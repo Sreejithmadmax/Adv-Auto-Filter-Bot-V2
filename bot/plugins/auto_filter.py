@@ -108,7 +108,7 @@ async def auto_filter(bot, update):
     
     if filters:
         results.append([
-                    InlineKeyboardButton("🔮Size🔮", callback_data="ignore"),
+                    InlineKeyboardButton("🔮Size🔮", callback_data="ignore")
                     InlineKeyboardButton("🔮Cinema🔮", callback_data="ignore"),
                     InlineKeyboardButton("🔮Size🔮", callback_data="ignore")
                 ]
