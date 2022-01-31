@@ -109,7 +109,7 @@ async def auto_filter(bot, update):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton('🔰𝙼𝙾𝚅𝙸𝙴𝚂🔰', url='https://t.me/MCanimes'),
+                    InlineKeyboardButton(f'{query}', url='https://t.me/MCanimes'),
                     InlineKeyboardButton('🔰𝚂𝙴𝚁𝙸𝙴𝚂🔰', url='https://t.me/Mclinkzz')
                 ]
             )
