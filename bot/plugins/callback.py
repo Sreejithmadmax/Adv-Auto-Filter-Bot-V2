@@ -1538,6 +1538,15 @@ async def cb_set(bot, update: CallbackQuery):
     await update.message.edit_text(
         text, reply_markup=reply_markup, parse_mode="html"
     )
+@Client.on_callback_query(filters.regex("Tips"), group=2)
+async def my_instructs(bot, update: CallbackQuery):
+    #Callback Function for instructions when no results are available
+   
+   global VERIFY
+   chat_id = update.message.chat.id
+   user_id = update.from_user.id
+   await update.answer("kooiii", show_alert=True)
+   return
 
 @Client.on_callback_query(filters.regex("instructions"), group=2)
 async def my_instructs(bot, update: CallbackQuery):
