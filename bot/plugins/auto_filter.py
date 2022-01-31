@@ -109,8 +109,8 @@ async def auto_filter(bot, update):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton(f'🔰{query}🔰', url='https://t.me/MCanimes'),
-                    InlineKeyboardButton(f'🔰{result}🔰', url='https://t.me/Mclinkzz')
+                    InlineKeyboardButton(f'🔰{query}🔰', url='https://t.me/Imdbautofilter_bot'),
+                    InlineKeyboardButton(f'🔰{update.from_user.mention}🔰', url='https://t.me/Movies_Club_2019')
                 ]
             )
         for filter in filters: # iterating through each files
@@ -208,9 +208,8 @@ async def auto_filter(bot, update):
         result[0].append([
             InlineKeyboardButton(f"🔰Page 1/{len_result if len_result < max_pages else max_pages}🔰", callback_data="ignore")
         ])      
-        result[0].append([
-                    InlineKeyboardButton('🔰𝙼𝙾𝚅𝙸𝙴𝚂🔰', url='https://t.me/mcnewmovies'),
-                    InlineKeyboardButton('🔰𝚂𝙴𝚁𝙸𝙴𝚂🔰', url='https://t.me/MoviesClubSeriesonly')
+        result[0].append([            
+                    InlineKeyboardButton(f'🔰{update.chat.title}🔰', url='https://t.me/UrvashiTheaters')
                 ]
             )
         # if show_invite is True Append invite link buttons
