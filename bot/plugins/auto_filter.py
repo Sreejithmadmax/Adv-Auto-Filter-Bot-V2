@@ -107,10 +107,9 @@ async def auto_filter(bot, update):
     filters = await db.get_filters(group_id, query)
     
     if filters:
-        results.append([
-                    InlineKeyboardButton("🔮Size🔮", callback_data="ignore")
-                    InlineKeyboardButton("🔮Cinema🔮", callback_data="ignore"),
-                    InlineKeyboardButton("🔮Size🔮", callback_data="ignore")
+        results.append(
+                [
+                    InlineKeyboardButton("💢 𝗝𝗼𝗶𝗻 𝗢𝘂𝗿 𝗠𝗮𝗶𝗻 𝗰𝗵𝗮𝗻𝗻𝗲𝗹 💢", url=f"https://t.me/blinderTG")
                 ]
             )
         for filter in filters: # iterating through each files
