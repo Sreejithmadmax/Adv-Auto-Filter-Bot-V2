@@ -109,7 +109,7 @@ async def auto_filter(bot, update):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton(f"🔮{query}🔮", url="https://t.me/blindertg")
+                    InlineKeyboardButton(f"🔮{query}🔮", callback_data="help_me")
                 ]
             ) 
 
