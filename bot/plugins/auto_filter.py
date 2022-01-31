@@ -109,8 +109,7 @@ async def auto_filter(bot, update):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton(f'🔰{query}🔰', url='https://t.me/Imdbautofilter_bot'),
-                    InlineKeyboardButton(f'🔰{update.from_user.mention}🔰', url='https://t.me/Movies_Club_2019')
+                    InlineKeyboardButton(f'🔰{query}🔰', url='https://t.me/Imdbautofilter_bot')
                 ]
             )
         for filter in filters: # iterating through each files
