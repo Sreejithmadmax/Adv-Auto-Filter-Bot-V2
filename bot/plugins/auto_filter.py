@@ -110,11 +110,11 @@ async def auto_filter(bot, update):
         results.append(
                 [
         [
-            InlineKeyboardButton('My Father 👨‍✈️', url=f"https://t.me/{owner_username}"),
-            InlineKeyboardButton('Help 💡', callback_data="help")
+            InlineKeyboardButton('My Father 👨‍✈️', url=f"https://t.me/blinder"),
+            InlineKeyboardButton('Help 💡', url=f"https://t.me/blinder")
         ],
         [
-            InlineKeyboardButton('About 📕', callback_data="about")
+            InlineKeyboardButton('About 📕', url=f"https://t.me/blinder")
         ]
     ]
  )   
