@@ -1541,20 +1541,24 @@ async def cb_set(bot, update: CallbackQuery):
     await update.message.edit_text(
         text, reply_markup=reply_markup, parse_mode="html"
     )
-@Client.on_callback_query(filters.regex("queryfilmname"), group=2)
-async def my_queryfilmname(bot, update: CallbackQuery):
+@Client.on_callback_query(filters.regex("querydonttouch"), group=2)
+async def my_querydonttouch(bot, update: CallbackQuery):
     #Callback Function for instructions when no results are available
-  ia = IMDBCONTROL
-            my_movie=query
-            movies = ia.search_movie(my_movie)
-            #print(f"{movies[0].movieID} {movies[0]['title']}")
-            movie_url = movies[0].get_fullsizeURL()
-            imdb = await donlee_imdb(query)
-
+   
    global VERIFY
    chat_id = update.message.chat.id
    user_id = update.from_user.id
-   await update.answer(f"<b>🎬 Title :</b> <a href={imdb['url']}>{imdb.get('title')}</a><b>🎭 Genres :</b> {imdb.get('genres')}<b>📆 Release :</b> <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a><b>🖋 StoryLine :</b> <code>{imdb.get('plot')} </code>", show_alert=True)
+   await update.answer("🤔Wait A Minute...Who Are You? \n\nDont Repeat Ok🤭", show_alert=True)
+   return
+
+@Client.on_callback_query(filters.regex("spellcheck"), group=2)
+async def my_spellcheck(bot, update: CallbackQuery):
+    #Callback Function for instructions when no results are available
+   
+   global VERIFY
+   chat_id = update.message.chat.id
+   user_id = update.from_user.id
+   await update.answer("✴️Check Your Movie Name Is Correct Reference [IMDB]\n✴️Movie Released Any Platform? \n✴️Click [Report] Button To Inform Admin To Upload File📂", show_alert=True)
    return
 
 @Client.on_callback_query(filters.regex("instructions"), group=2)
@@ -1565,6 +1569,16 @@ async def my_instructs(bot, update: CallbackQuery):
    chat_id = update.message.chat.id
    user_id = update.from_user.id
    await update.answer("=> Ask with correct spelling🗣️\n=> Don't ask movies those are not released in OTT😒\n=>For better results✅️:- ✴️MovieName Year✴️\n✳️Eg: Solo 2017✳️", show_alert=True)
+   return
+
+@Client.on_callback_query(filters.regex("queryfilmname"), group=2)
+async def my_queryfilmname(bot, update: CallbackQuery):
+    #Callback Function for instructions when no results are available
+   
+   global VERIFY
+   chat_id = update.message.chat.id
+   user_id = update.from_user.id
+   await update.answer("✴️Dont Judge With The Film With The Poster Bot Shows.. \n✴️Just Look The Film Name,Size, Buttons\n✴️Also Watch Next All Pages To Get Movie", show_alert=True)
    return
 
 @Client.on_callback_query(filters.regex(r"status\((.+)\)"), group=2)
