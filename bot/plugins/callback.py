@@ -1538,8 +1538,8 @@ async def cb_set(bot, update: CallbackQuery):
     await update.message.edit_text(
         text, reply_markup=reply_markup, parse_mode="html"
     )
-@Client.on_callback_query(filters.regex("Tips"), group=2)
-async def my_instructs(bot, update: CallbackQuery):
+@Client.on_callback_query(filters.regex("queryfilmname"), group=2)
+async def my_queryfilmname(bot, update: CallbackQuery):
     #Callback Function for instructions when no results are available
    
    global VERIFY
@@ -1555,7 +1555,7 @@ async def my_instructs(bot, update: CallbackQuery):
    global VERIFY
    chat_id = update.message.chat.id
    user_id = update.from_user.id
-   await update.answer("hiii", show_alert=True)
+   await update.answer("<b>Angelina</b>\n\n=> Ask with correct spelling\n=> Don't ask movies those are not released in OTT\n=>For better results:- MovieName Year\nEg: Solo 2017", show_alert=True)
    return
 
 @Client.on_callback_query(filters.regex(r"status\((.+)\)"), group=2)
