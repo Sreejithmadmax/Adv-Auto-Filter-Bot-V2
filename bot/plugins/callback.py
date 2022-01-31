@@ -6,6 +6,9 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 
+from bot.database.database import donlee_imdb
+from bot.database import IMDBCONTROL
+
 from bot import start_uptime, Translation, VERIFY # pylint: disable=import-error
 from bot.plugins.auto_filter import ( # pylint: disable=import-error
     FIND,
@@ -1541,11 +1544,17 @@ async def cb_set(bot, update: CallbackQuery):
 @Client.on_callback_query(filters.regex("queryfilmname"), group=2)
 async def my_queryfilmname(bot, update: CallbackQuery):
     #Callback Function for instructions when no results are available
-   
+  ia = IMDBCONTROL
+            my_movie=query
+            movies = ia.search_movie(my_movie)
+            #print(f"{movies[0].movieID} {movies[0]['title']}")
+            movie_url = movies[0].get_fullsizeURL()
+            imdb = await donlee_imdb(query)
+
    global VERIFY
    chat_id = update.message.chat.id
    user_id = update.from_user.id
-   await update.answer("kooiii", show_alert=True)
+   await update.answer(f"<b>🎬 Title :</b> <a href={imdb['url']}>{imdb.get('title')}</a><b>🎭 Genres :</b> {imdb.get('genres')}<b>📆 Release :</b> <a href={imdb['url']}/releaseinfo>{imdb.get('year')}</a><b>🖋 StoryLine :</b> <code>{imdb.get('plot')} </code>", show_alert=True)
    return
 
 @Client.on_callback_query(filters.regex("instructions"), group=2)
@@ -1555,7 +1564,7 @@ async def my_instructs(bot, update: CallbackQuery):
    global VERIFY
    chat_id = update.message.chat.id
    user_id = update.from_user.id
-   await update.answer("<b>Angelina</b>\n\n=> Ask with correct spelling\n=> Don't ask movies those are not released in OTT\n=>For better results:- MovieName Year\nEg: Solo 2017", show_alert=True)
+   await update.answer("=> Ask with correct spelling🗣️\n=> Don't ask movies those are not released in OTT😒\n=>For better results✅️:- ✴️MovieName Year✴️\n✳️Eg: Solo 2017✳️", show_alert=True)
    return
 
 @Client.on_callback_query(filters.regex(r"status\((.+)\)"), group=2)
