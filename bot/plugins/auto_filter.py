@@ -195,14 +195,14 @@ async def auto_filter(bot, update):
                             ],                     
                             [
                                 InlineKeyboardButton("🎭 Reason", callback_data="spellcheck"),
-                                InlineKeyboardButton('📃 Report To Admin', url='https://t.me/UrvashiTheatersAdmin_Bot')       
+                                InlineKeyboardButton('📃 Report', url='https://t.me/UrvashiTheatersAdmin_Bot')       
                             ]
                           
                         ]
                     ),
                 reply_to_message_id=update.message_id
             )
-        await asyncio.sleep(2) # in seconds
+        await asyncio.sleep(15) # in seconds
         await Send_message.delete()
         # await bot.delete_messages(update.chat.id,update.message_id)
         return  # return if no files found for that query
