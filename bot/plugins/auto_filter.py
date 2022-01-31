@@ -109,7 +109,8 @@ async def auto_filter(bot, update):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton(f'🔰{query}🔰', url='https://t.me/Imdbautofilter_bot')
+                    InlineKeyboardButton("🔰Size🔰", callback_data="ignore"),
+                    InlineKeyboardButton("🔰Film Name🔰", callback_data="ignore")
                 ]
             )
         for filter in filters: # iterating through each files
@@ -205,8 +206,10 @@ async def auto_filter(bot, update):
         
         # Just A Decaration
         result[0].append([
-            InlineKeyboardButton(f"🔰Page 1/{len_result if len_result < max_pages else max_pages}🔰", callback_data="ignore")
-        ])      
+                    InlineKeyboardButton(f"🔰Page 1/{len_result if len_result < max_pages else max_pages}🔰", callback_data="ignore"),
+                    InlineKeyboardButton("⚠️Dont Do⚠️", callback_data="ignore")
+                ]
+            )      
         result[0].append([            
                     InlineKeyboardButton(f'🔰{update.chat.title}🔰', url='https://t.me/UrvashiTheaters')
                 ]
