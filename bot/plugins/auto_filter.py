@@ -109,8 +109,8 @@ async def auto_filter(bot, update):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton(f'{query}', url='https://t.me/MCanimes'),
-                    InlineKeyboardButton('🔰𝚂𝙴𝚁𝙸𝙴𝚂🔰', url='https://t.me/Mclinkzz')
+                    InlineKeyboardButton(f'🔰{query}🔰', url='https://t.me/MCanimes'),
+                    InlineKeyboardButton(f'🔰{(len_results)}🔰', url='https://t.me/Mclinkzz')
                 ]
             )
         for filter in filters: # iterating through each files
