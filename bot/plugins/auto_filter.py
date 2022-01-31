@@ -107,11 +107,12 @@ async def auto_filter(bot, update):
     filters = await db.get_filters(group_id, query)
     
     if filters:
-        results.append([
-            InlineKeyboardButton("⚠️Dont Do⚠️", callback_data="ignore")
-            InlineKeyboardButton(f"1/{len_result if len_result < max_pages else max_pages}🔰", callback_data="ignore"),
-            InlineKeyboardButton("𝖭𝖾𝗑𝗍 »»", callback_data=f"navigate(0|next|{query})")
-        ])
+        result[0].append([
+                    InlineKeyboardButton("🔮Size🔮", callback_data="ignore"),
+                    InlineKeyboardButton("🔮Cinema🔮", callback_data="ignore"),
+                    InlineKeyboardButton("🔮Size🔮", callback_data="ignore")
+                ]
+            )
         for filter in filters: # iterating through each files
             file_name = filter.get("file_name")
             file_type = filter.get("file_type")
