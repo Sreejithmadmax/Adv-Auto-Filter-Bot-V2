@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # (c) @AlbertEinsteinTG & @Mrk_YT
-
 from pyrogram import filters, Client
+from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
+from pyrogram.methods import invite_links
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
-from pyrogram.errors import UserNotParticipant
+from pyrogram.errors import PeerIdInvalid, UserNotParticipant
 from bot import Translation # pylint: disable=import-error
 from bot.database import Database # pylint: disable=import-error
 
@@ -34,7 +35,7 @@ async def start(bot, update):
             await bot.send_message(
                     chat_id=update.chat.id,
                     text="<b><u>🔰You Need To Join Our Channel and Press Refresh Button to get the file</b></u>.\n<b><u>🔰ചാനലിൽ ജോയിൻ ചെയ്ത് Refresh കൊടുത്ത് start കൊടുക്കുക💗</b></u>",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Join Channel",url="https://t.me/+UZoPDAQZYXcxMDFl")],
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Join Channel",url="https://t.me/Urvashi_Series")],
                                                        [InlineKeyboardButton(text="Refresh", url=f"https://t.me/{me.username}?start={file_uid}")]]),
                     reply_to_message_id=update.message_id
                     )
