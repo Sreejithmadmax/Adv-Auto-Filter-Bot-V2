@@ -11,6 +11,10 @@ from bot.database import Database # pylint: disable=import-error
 
 db = Database()
 
+PHOTO = [
+    "https://telegra.ph/file/c93da57debb22739aa49f.jpg"
+]
+
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
     
@@ -117,15 +121,21 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('🤴 𝙳𝙴𝚅 🤴', url="https://t.me/BlinderTG"),
-        InlineKeyboardButton('🚫 𝙲𝚕𝚘𝚜𝚎 🚫', callback_data='close')
+        InlineKeyboardButton('Developers', url='https://t.me/CrazyBotsz'),
+        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2')
+    ],[
+        InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
+    ],[
+        InlineKeyboardButton('Help ⚙', callback_data="help")
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_sticker(
+    await bot.send_photo(
+        photo=f"{random.choice(PHOTO)}",
         chat_id=update.chat.id,
-        sticker= "CAACAgIAAxkBAAEBSqthkjttlt0G5Byj7Eq1qRucBVR0wQAC1AwAAnqLoEieLyIklDO8mx4E",
+        caption=Translation.START_TEXT.format(
+                update.from_user.first_name),
         reply_markup=reply_markup,
         reply_to_message_id=update.message_id
     )
@@ -134,15 +144,18 @@ async def start(bot, update):
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
-        InlineKeyboardButton('🤴 𝙳𝙴𝚅 🤴', url="https://t.me/BlinderTG"),
-        InlineKeyboardButton('🚫 𝙲𝚕𝚘𝚜𝚎 🚫', callback_data='close')
+        InlineKeyboardButton('Home ⚡', callback_data='start'),
+        InlineKeyboardButton('About 🚩', callback_data='about')
+    ],[
+        InlineKeyboardButton('Close 🔐', callback_data='close')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_sticker(
+    await bot.send_photo(
+        photo=f"{random.choice(PHOTO)}",
         chat_id=update.chat.id,
-        sticker= "CAACAgIAAxkBAAEBSp1hkjljLaP-qN6BNBV22JpfzhPV-wACzxEAAud1mUikiFSKzlb3ZB4E",
+        caption=Translation.HELP_TEXT,
         reply_markup=reply_markup,
         reply_to_message_id=update.message_id
     )
@@ -152,14 +165,15 @@ async def help(bot, update):
 async def about(bot, update):
     
     buttons = [[
-        InlineKeyboardButton('🤴 𝙳𝙴𝚅 🤴', url="https://t.me/BlinderTG"),
-        InlineKeyboardButton('🚫 𝙲𝚕𝚘𝚜𝚎 🚫', callback_data='close')
+        InlineKeyboardButton('Home ⚡', callback_data='start'),
+        InlineKeyboardButton('Close 🔐', callback_data='close')
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_sticker(
+    await bot.send_photo(
+        photo=f"{random.choice(PHOTO)}",
         chat_id=update.chat.id,
-        sticker= "CAACAgIAAxkBAAEBSqNhkjmJai0tXFRHtq8fTXyYWcSJygACZg8AAlGwsEiUHH3OCPuZqR4E",
+        caption=Translation.ABOUT_TEXT,
         reply_markup=reply_markup,
         reply_to_message_id=update.message_id
     )
