@@ -8,7 +8,7 @@ class Translation(object):
 
 <b>Am Just A Pro Auto Filter Bot....😉</b>
 
-<b>Just Add Me To Your Group And Channel(✴️Coming Soon✴️)🔥🔥</b>
+<b>Just Add Me To Your Group And Channel\n(👆Coming Soon👆)🔥🔥</b>
 
 <b>Press /help to know about available commands🤪</b>"""    
     
@@ -21,7 +21,7 @@ class Translation(object):
 │
 ├ /about : Aʙᴏᴜᴛ Mᴇ
 │
-├ Pᴏᴡᴇʀᴇᴅ Bʏ : [✨️ഉർവശി തീയറ്റേഴ്‌സ്✨️](https://t.me/UrvashiTheaters)
+├ Pᴏᴡᴇʀᴇᴅ Bʏ : [<a href='https://t.me/UrvashiTheaters'>✨️ഉർവശി തീയറ്റേഴ്‌സ്✨️</a>]
 │
 ╰──────[ Tʜᴀɴᴋ Yᴏᴜ ]───⍟
 -> Only For <b><a href="https://t.me/UrvashiTheaters">✨️ഉർവശി തീയറ്റേഴ്‌സ്✨️</a></b>
@@ -32,21 +32,21 @@ class Translation(object):
     ABOUT_TEXT = """
 ╭────[ ᴍᴀʜᴇꜱʜ ᴀᴅʜᴏʟᴏᴋʜᴀᴍ™ ]───⍟
 │
-├ Bᴏᴛ Nᴀᴍᴇ : [ᴍᴀʜᴇꜱʜ ᴀᴅʜᴏʟᴏᴋʜᴀᴍ™](https://t.me/Autofilteropen_bot)
+├ Bᴏᴛ Nᴀᴍᴇ : [<a href='https://t.me/Autofilteropen_bot'>ᴍᴀʜᴇꜱʜ ᴀᴅʜᴏʟᴏᴋʜᴀᴍ™</a>]
 │
-├ Cʜᴀɴɴᴇʟ : [✨️ഉർവശി തീയറ്റേഴ്‌സ്✨️](https://t.me/UrvashiTheaters)
+├ Cʜᴀɴɴᴇʟ : [<a href='https://t.me/UrvashiTheaters'>✨️ഉർവശി തീയറ്റേഴ്‌സ്✨️</a>]
 │
 ├ Vᴇʀsɪᴏɴ : 1.0.2.2  Bᴇᴛᴀ
 │
-├ Sᴏᴜʀᴄᴇ : [Cʟɪᴄᴋ Hᴇʀᴇ](https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2)
+├ Sᴏᴜʀᴄᴇ : [<a href='https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2'>Cʟɪᴄᴋ Hᴇʀᴇ</a>]
 │
-├ Sᴇʀᴠᴇʀ : [Hᴇʀᴏᴋᴜ](https://www.heroku.com)
+├ Sᴇʀᴠᴇʀ : [<a href='https://www.heroku.com'>Hᴇʀᴏᴋᴜ</a>]
 │
-├ Dᴇᴠᴇʟᴏᴘᴇʀ : [Cʟɪᴄᴋ Hᴇʀᴇ](https://t.me/CrazyBotsz)
+├ Dᴇᴠᴇʟᴏᴘᴇʀ : [<a href='https://t.me/CrazyBotsz'>Cʟɪᴄᴋ Hᴇʀᴇ</a>]
 │
-├ Eᴅɪᴛɪɴɢ : [Cʟɪᴄᴋ Hᴇʀᴇ](https://t.me/BlinderTG)
+├ Eᴅɪᴛɪɴɢ : [<a href='https://t.me/BlinderTG'>Cʟɪᴄᴋ Hᴇʀᴇ</a>]
 │
-├ Pᴏᴡᴇʀᴇᴅ Bʏ : [✨️ഉർവശി തീയറ്റേഴ്‌സ്✨️](https://t.me/Movies_Club_2019)
+├ Pᴏᴡᴇʀᴇᴅ Bʏ : [<a href='https://t.me/Movies_Club_2019'>✨️ഉർവശി തീയറ്റേഴ്‌സ്✨️</a>]
 │
 ├ Cʀᴇᴅɪᴛꜱ : @Sanoob_Achu_18
 │
