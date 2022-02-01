@@ -114,7 +114,7 @@ async def auto_filter(bot, update):
             ) 
 
         results.append([
-                    InlineKeyboardButton("🔅Trick🔅", callback_data="queryfilmname"),
+                    InlineKeyboardButton("✨️ഉർവശി തീയറ്റേഴ്‌സ്✨️", callback_data="queryfilmname"),
                     InlineKeyboardButton("🔅Tips🔅", callback_data="instructions")
                 ]
             )
