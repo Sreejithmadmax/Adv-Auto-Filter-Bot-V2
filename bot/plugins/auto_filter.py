@@ -57,7 +57,7 @@ async def auto_filter(bot, update):
 
             chat_id=update.chat.id,
 
-            text="<b><u><i>⭕️സിനിമയുടെ പേര് മാത്രം അയക്കൂ സുഹൃത്തേ🙏\n\n⭕️Please Sent Movie Name Only🤧\n\n⭕️Search Full Result Of ᴰᵁᴰᴱ ᴬᴰᴴᴼᴸᴷᴴᴬᴹ\n\nOr Contact Admin 👉@BlinderTG....</u></i></b>",
+            text="<b><u><i>⭕️സിനിമയുടെ പേര് മാത്രം അയക്കൂ സുഹൃത്തേ🙏\n\n⭕️Please Sent Movie Name Only🤧\n\n⭕️Search Full Result Of bots🤖\n\nOr Contact Admin 👉@UrvashiTheatersAdmin_Bot....</u></i></b>",
 
             reply_to_message_id=update.message_id
 
