@@ -323,16 +323,10 @@ async def auto_filter(bot, update):
           print(e)
 
           try:
-              await bot.send_photo(
-                photo=f"{random.choice(PHOTO)}",
+              await bot.send_sticker(
+                sticker="CAACAgUAAxkBAAEByQABYfjny5mhKeqNd7Ms_mHFQYtrPh0AAsEEAAKnr9BWEhuifkPphXkeBA",
                 chat_id = update.chat.id,
-                caption=f"""📂 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {query}
-📍Requested :- {update.from_user.mention}
-⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [<a href='https://t.me/Autofiltergroup_bot'>𝓐𝓵𝓫𝓮𝓻𝓽 𝓔𝓲𝓷𝓼𝓽𝓮𝓲𝓷〽️©️</a>]
-🔰 Group : {update.chat.title}
-👮‍♂ ɴᴏᴛɪᴄᴇ : <code>ɪ𝙵 ʏᴏᴜ ᴅᴏ ɴᴏᴛ sᴇᴇ ᴛʜᴇ 𝙵ɪʟᴇ𝚂 ᴏ𝙵 ᴛʜɪ𝚂 ᴍᴏᴠɪᴇ ʏᴏᴜ ᴀ𝚂ᴋᴇᴅ 𝙵ᴏʀ . ʟᴏᴏᴋ ᴀᴛ ɴᴇ𝚇ᴛ ᴘᴀɢᴇ</code>""",
                 reply_markup=reply_markup,
-                parse_mode="html",
                 reply_to_message_id=update.message_id
             )
 
