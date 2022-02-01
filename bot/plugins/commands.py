@@ -34,7 +34,7 @@ async def start(bot, update):
             await bot.send_message(
                     chat_id=update.chat.id,
                     text="<b><u>🔰You Need To Join Our Channel and Press Refresh Button to get the file</b></u>.\n<b><u>🔰ചാനലിൽ ജോയിൻ ചെയ്ത് Refresh കൊടുത്ത് start കൊടുക്കുക💗</b></u>",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Join Channel",url="https://t.me/+IK2aZWUBgjkwMjFl")],
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Join Channel",url="https://t.me/+UZoPDAQZYXcxMDFl")],
                                                        [InlineKeyboardButton(text="Refresh", url=f"https://t.me/{me.username}?start={file_uid}")]]),
                     reply_to_message_id=update.message_id
                     )
@@ -61,21 +61,14 @@ async def start(bot, update):
             await bot.send_document(
                 chat_id=update.chat.id,
                 document = file_id,
-                caption =f"<b>❤️ 𝙵𝙸𝙻𝙴 𝙽𝙰𝙼𝙴<code> {file_name}</code></b>\n<b>❤️ 𝚃𝚑𝚊𝚗𝚔𝚢𝚘𝚞 𝙵𝚘𝚛 𝚄𝚜𝚒𝚗𝚐 𝙾𝚞𝚛 𝚂𝚎𝚛𝚟𝚒𝚌𝚎 𝙿𝚕𝚎𝚊𝚜𝚎 𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝚄𝚜 𝙱𝚢 𝚂𝚑𝚊𝚛𝚒𝚗𝚐 𝙾𝚞𝚛 𝙲𝚑𝚊𝚗𝚗𝚎𝚕/𝙶𝚛𝚘𝚞𝚙 𝙻𝚒𝚗𝚔 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙵𝚛𝚒𝚎𝚗𝚍𝚜</b>\n❁𝕁𝕠𝕚𝕟 𝕆𝕦𝕣 ℂ𝕙𝕒𝕟𝕟𝕖𝕝𝕤❁  \n⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱\n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @moviesupdats1➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑 : @movies_Club_2018➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @mcnewmovies➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @filterv32➻",
+                caption =f"<b>❤️ 𝙵𝙸𝙻𝙴 𝙽𝙰𝙼𝙴<code> {file_name}</code></b>\n<b>❤️ 𝚃𝚑𝚊𝚗𝚔𝚢𝚘𝚞 𝙵𝚘𝚛 𝚄𝚜𝚒𝚗𝚐 𝙾𝚞𝚛 𝚂𝚎𝚛𝚟𝚒𝚌𝚎 𝙿𝚕𝚎𝚊𝚜𝚎 𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝚄𝚜 𝙱𝚢 𝚂𝚑𝚊𝚛𝚒𝚗𝚐 𝙾𝚞𝚛 𝙲𝚑𝚊𝚗𝚗𝚎𝚕/𝙶𝚛𝚘𝚞𝚙 𝙻𝚒𝚗𝚔 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙵𝚛𝚒𝚎𝚗𝚍𝚜</b>",
                 parse_mode="html",         
                 reply_to_message_id=update.message_id,
                 reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('𝚂𝙷𝙰𝚁𝙴', url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/Movies_Club_2019")
-                ],
-                [
-                    InlineKeyboardButton('𝙼𝙾𝚅𝙸𝙴 𝚁𝙴𝚀', url="https://t.me/Movies_Club_2019"),
-                    InlineKeyboardButton('𝚂𝙴𝚁𝙸𝙴𝚂', url="https://t.me/+LB7el58sajNlZDg1")
-                ],
-                [
-                    InlineKeyboardButton('𝙼𝙲 𝙻𝙸𝙽𝙺𝚉', url="https://t.me/Mclinkzz"),
-                    InlineKeyboardButton('𝙰𝙽𝙸𝙼𝙴', url="https://t.me/MCanimes")
+                    InlineKeyboardButton('𝙼𝙾𝚅𝙸𝙴 𝚁𝙴𝚀', url="https://t.me/UrvashiTheaters"),
+                    InlineKeyboardButton('𝚂𝙴𝚁𝙸𝙴𝚂', url="https://t.me/Urvashi_Series")
                 ]
             ]
         )
@@ -86,20 +79,14 @@ async def start(bot, update):
             await bot.send_video(
                 chat_id=update.chat.id,
                 video = file_id,
-                caption =f"<b>❤️ 𝙵𝙸𝙻𝙴 𝙽𝙰𝙼𝙴<code> {file_name}</code></b>\n<b>❤️ 𝚃𝚑𝚊𝚗𝚔𝚢𝚘𝚞 𝙵𝚘𝚛 𝚄𝚜𝚒𝚗𝚐 𝙾𝚞𝚛 𝚂𝚎𝚛𝚟𝚒𝚌𝚎 𝙿𝚕𝚎𝚊𝚜𝚎 𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝚄𝚜 𝙱𝚢 𝚂𝚑𝚊𝚛𝚒𝚗𝚐 𝙾𝚞𝚛 𝙲𝚑𝚊𝚗𝚗𝚎𝚕/𝙶𝚛𝚘𝚞𝚙 𝙻𝚒𝚗𝚔 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙵𝚛𝚒𝚎𝚗𝚍𝚜</b>\n❁𝕁𝕠𝕚𝕟 𝕆𝕦𝕣 ℂ𝕙𝕒𝕟𝕟𝕖𝕝𝕤❁  \n⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱\n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @moviesupdats1➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑 : @movies_Club_2018➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @mcnewmovies➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @filterv32➻",
-                parse_mode="html",
+                caption =f"<b>❤️ 𝙵𝙸𝙻𝙴 𝙽𝙰𝙼𝙴<code> {file_name}</code></b>\n<b>❤️ 𝚃𝚑𝚊𝚗𝚔𝚢𝚘𝚞 𝙵𝚘𝚛 𝚄𝚜𝚒𝚗𝚐 𝙾𝚞𝚛 𝚂𝚎𝚛𝚟𝚒𝚌𝚎 𝙿𝚕𝚎𝚊𝚜𝚎 𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝚄𝚜 𝙱𝚢 𝚂𝚑𝚊𝚛𝚒𝚗𝚐 𝙾𝚞𝚛 𝙲𝚑𝚊𝚗𝚗𝚎𝚕/𝙶𝚛𝚘𝚞𝚙 𝙻𝚒𝚗𝚔 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙵𝚛𝚒𝚎𝚗𝚍𝚜</b>",
+                parse_mode="html",         
+                reply_to_message_id=update.message_id,
                 reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('𝚂𝙷𝙰𝚁𝙴', url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/Movies_Club_2019")
-                ],
-                [
-                    InlineKeyboardButton('𝙼𝙾𝚅𝙸𝙴 𝚁𝙴𝚀', url="https://t.me/Movies_Club_2019"),
-                    InlineKeyboardButton('𝚂𝙴𝚁𝙸𝙴𝚂', url="https://t.me/+LB7el58sajNlZDg1")
-                ],
-                [
-                    InlineKeyboardButton('𝙼𝙲 𝙻𝙸𝙽𝙺𝚉', url="https://t.me/Mclinkzz"),
-                    InlineKeyboardButton('𝙰𝙽𝙸𝙼𝙴', url="https://t.me/MCanimes")
+                    InlineKeyboardButton('𝙼𝙾𝚅𝙸𝙴 𝚁𝙴𝚀', url="https://t.me/UrvashiTheaters"),
+                    InlineKeyboardButton('𝚂𝙴𝚁𝙸𝙴𝚂', url="https://t.me/Urvashi_Series")
                 ]
             ]
         )
@@ -110,20 +97,14 @@ async def start(bot, update):
             await bot.send_audio(
                 chat_id=update.chat.id,
                 audio = file_id,
-                caption =f"<b>❤️ 𝙵𝙸𝙻𝙴 𝙽𝙰𝙼𝙴<code> {file_name}</code></b>\n<b>❤️ 𝚃𝚑𝚊𝚗𝚔𝚢𝚘𝚞 𝙵𝚘𝚛 𝚄𝚜𝚒𝚗𝚐 𝙾𝚞𝚛 𝚂𝚎𝚛𝚟𝚒𝚌𝚎 𝙿𝚕𝚎𝚊𝚜𝚎 𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝚄𝚜 𝙱𝚢 𝚂𝚑𝚊𝚛𝚒𝚗𝚐 𝙾𝚞𝚛 𝙲𝚑𝚊𝚗𝚗𝚎𝚕/𝙶𝚛𝚘𝚞𝚙 𝙻𝚒𝚗𝚔 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙵𝚛𝚒𝚎𝚗𝚍𝚜</b>\n❁𝕁𝕠𝕚𝕟 𝕆𝕦𝕣 ℂ𝕙𝕒𝕟𝕟𝕖𝕝𝕤❁  \n⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱⟱\n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @moviesupdats1➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑 : @movies_Club_2018➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @mcnewmovies➻ \n📌𝕮𝖍𝖆𝖓𝖓𝖊𝖑: @filterv32➻",
-                parse_mode="html",
+                caption =f"<b>❤️ 𝙵𝙸𝙻𝙴 𝙽𝙰𝙼𝙴<code> {file_name}</code></b>\n<b>❤️ 𝚃𝚑𝚊𝚗𝚔𝚢𝚘𝚞 𝙵𝚘𝚛 𝚄𝚜𝚒𝚗𝚐 𝙾𝚞𝚛 𝚂𝚎𝚛𝚟𝚒𝚌𝚎 𝙿𝚕𝚎𝚊𝚜𝚎 𝚂𝚞𝚙𝚙𝚘𝚛𝚝 𝚄𝚜 𝙱𝚢 𝚂𝚑𝚊𝚛𝚒𝚗𝚐 𝙾𝚞𝚛 𝙲𝚑𝚊𝚗𝚗𝚎𝚕/𝙶𝚛𝚘𝚞𝚙 𝙻𝚒𝚗𝚔 𝚃𝚘 𝚈𝚘𝚞𝚛 𝙵𝚛𝚒𝚎𝚗𝚍𝚜</b>",
+                parse_mode="html",         
+                reply_to_message_id=update.message_id,
                 reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('𝚂𝙷𝙰𝚁𝙴', url="https://t.me/share/url?url=https%3A//t.me/share/url%3Furl%3Dhttps%253A//t.me/Movies_Club_2019")
-                ],
-                [
-                    InlineKeyboardButton('𝙼𝙾𝚅𝙸𝙴 𝚁𝙴𝚀', url="https://t.me/Movies_Club_2019"),
-                    InlineKeyboardButton('𝚂𝙴𝚁𝙸𝙴𝚂', url="https://t.me/+LB7el58sajNlZDg1")
-                ],
-                [
-                    InlineKeyboardButton('𝙼𝙲 𝙻𝙸𝙽𝙺𝚉', url="https://t.me/Mclinkzz"),
-                    InlineKeyboardButton('𝙰𝙽𝙸𝙼𝙴', url="https://t.me/MCanimes")
+                    InlineKeyboardButton('𝙼𝙾𝚅𝙸𝙴 𝚁𝙴𝚀', url="https://t.me/UrvashiTheaters"),
+                    InlineKeyboardButton('𝚂𝙴𝚁𝙸𝙴𝚂', url="https://t.me/Urvashi_Series")
                 ]
             ]
         )
