@@ -21,7 +21,7 @@ async def start(bot, update):
     
     if file_uid:
         try:
-            member = await bot.get_chat_member(-1001569614628, update.chat.id)
+            member = await bot.get_chat_member(-1001657212020, update.chat.id)
             if member.status == "kicked":
                 await bot.send_message(
                        chat_id=update.chat.id,
@@ -35,7 +35,7 @@ async def start(bot, update):
             await bot.send_message(
                     chat_id=update.chat.id,
                     text="<b><u>🔰You Need To Join Our Channel and Press Refresh Button to get the file</b></u>.\n<b><u>🔰ചാനലിൽ ജോയിൻ ചെയ്ത് Refresh കൊടുത്ത് start കൊടുക്കുക💗</b></u>",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Join Channel",url="https://t.me/Urvashi_Series")],
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Join Channel",url="https://t.me/EinsteinBotFriends")],
                                                        [InlineKeyboardButton(text="Refresh", url=f"https://t.me/{me.username}?start={file_uid}")]]),
                     reply_to_message_id=update.message_id
                     )
