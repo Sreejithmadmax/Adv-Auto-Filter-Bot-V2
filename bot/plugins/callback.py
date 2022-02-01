@@ -145,7 +145,7 @@ async def cb_navg(bot, update: CallbackQuery):
     
     reply_markup = InlineKeyboardMarkup(temp_results)
 
-    text=f"📂 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {query}\n📍Requested :- {update.from_user.mention}\n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [<a href='https://t.me/UrvashiTheaters'>𝓐𝓵𝓫𝓮𝓻𝓽 𝓔𝓲𝓷𝓼𝓽𝓮𝓲𝓷〽️©️</a>]\n👮‍♂ ɴᴏᴛɪᴄᴇ : <code>ɪ𝙵 ʏᴏᴜ ᴅᴏ ɴᴏᴛ sᴇᴇ ᴛʜᴇ 𝙵ɪʟᴇ𝚂 ᴏ𝙵 ᴛʜɪ𝚂 ᴍᴏᴠɪᴇ ʏᴏᴜ ᴀ𝚂ᴋᴇᴅ 𝙵ᴏʀ . ʟᴏᴏᴋ ᴀᴛ ɴᴇ𝚇ᴛ ᴘᴀɢᴇ</code>"
+    text=f"📂 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : {query}\n📍Requested :- {update.from_user.mention}\n⚡️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ : [<a href='https://t.me/Autofilteropen_bot'>ᴍᴀʜᴇꜱʜ ᴀᴅʜᴏʟᴏᴋʜᴀᴍ™</a>]\n👮‍♂ ɴᴏᴛɪᴄᴇ : <code>ɪ𝙵 ʏᴏᴜ ᴅᴏ ɴᴏᴛ sᴇᴇ ᴛʜᴇ 𝙵ɪʟᴇ𝚂 ᴏ𝙵 ᴛʜɪ𝚂 ᴍᴏᴠɪᴇ ʏᴏᴜ ᴀ𝚂ᴋᴇᴅ 𝙵ᴏʀ . ʟᴏᴏᴋ ᴀᴛ ɴᴇ𝚇ᴛ ᴘᴀɢᴇ</code>"
         
     try:
         await update.message.edit(
@@ -1679,48 +1679,51 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-        InlineKeyboardButton('Dev ✨️', url="https://t.me/Myfreak123"),
-        InlineKeyboardButton('Help 💞', callback_data="help")
+        InlineKeyboardButton('Developers', url='https://t.me/CrazyBotsz'),
+        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2')
+    ],[
+        InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
+    ],[
+        InlineKeyboardButton('Help ⚙', callback_data="help")
     ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
         
-        await update.message.edit_text(
+        await update.message.edit_caption(
             Translation.START_TEXT.format(update.from_user.mention),
-            reply_markup=reply_markup,
-            parse_mode="html",
-            disable_web_page_preview=True
+            reply_markup=reply_markup
         )
 
 
     elif query_data == "help":
         buttons = [[
-        InlineKeyboardButton('Dev ✨️', url="https://t.me/Myfreak123"),
-        InlineKeyboardButton('Help 💞', callback_data="help")
+        InlineKeyboardButton('Home ⚡', callback_data='start'),
+        InlineKeyboardButton('About 🚩', callback_data='about')
+    ],[
+        InlineKeyboardButton('Close 🔐', callback_data='close')
     ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
         
-        await update.message.edit_text(
+        await update.message.edit_caption(
             Translation.HELP_TEXT,
-            reply_markup=reply_markup,
-            parse_mode="html",
-            disable_web_page_preview=True
+            reply_markup=reply_markup
         )
 
 
     elif query_data == "about": 
         buttons = [[
-        InlineKeyboardButton('Dev ✨️', url="https://t.me/Myfreak123"),
-        InlineKeyboardButton('Help 💞', callback_data="help")
+        InlineKeyboardButton('Home ⚡', callback_data='start'),
+        InlineKeyboardButton('About 🚩', callback_data='about')
+    ],[
+        InlineKeyboardButton('Close 🔐', callback_data='close')
     ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
         
-        await update.message.edit_text(
+        await update.message.edit_caption(
             Translation.ABOUT_TEXT,
-            reply_markup=reply_markup,
-            parse_mode="html"
+            reply_markup=reply_markup
         )
 
 
