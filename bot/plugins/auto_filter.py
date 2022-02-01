@@ -189,7 +189,7 @@ async def auto_filter(bot, update):
                 reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🔍Search", url=f"https://google.com/search?q={query}Imdb")
+                                InlineKeyboardButton("🔍Search", url=f"https://google.com/search?q={query}")
                             ],                     
                             [
                                 InlineKeyboardButton("🎭 Reason", callback_data="spellcheck"),
