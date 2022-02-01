@@ -109,7 +109,7 @@ async def auto_filter(bot, update):
     if filters:
         results.append(
                 [
-                    InlineKeyboardButton(f"🔮{query}🔮", callback_data="ignore")
+                    InlineKeyboardButton(f"🔮{query}🔮", callback_data="querydonttouch")
                 ]
             ) 
 
