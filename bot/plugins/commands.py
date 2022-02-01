@@ -24,7 +24,7 @@ async def start(bot, update):
             if member.status == "kicked":
                 await bot.send_message(
                        chat_id=update.chat.id,
-                       text="Sorry mate!🤣  You're  B A N N E D 🥱 Contact Admin👉 @Myfreak123",
+                       text="Sorry mate!🤣  You're  B A N N E D 🥱 Contact Admin👉 @BlinderTG",
                        reply_to_message_id=update.message_id
                        )
                 return
