@@ -183,15 +183,13 @@ async def auto_filter(bot, update):
             )
         
     else:
-        Send_message=await bot.send_video(
+        Send_message=await bot.send_sticker(
                 chat_id=update.chat.id,
-                video="https://telegra.ph/file/c2c0ff4b927dcc50e7922.mp4",
-                caption=f"<b>കൂടുതൽ അറിയാൻ വീഡിയോ കാണുക(25 Sec)Watch Video👆</b>",
-                parse_mode="html",
+                sticker="CAACAgUAAxkBAAEByQ5h-O0PM7989UvoZrtxcvwe_lyxogACMwQAAoTT8Va9rS_EQ4gPzh4E",
                 reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🔍Search Google", url=f"https://google.com/search?q={query}Imdb")
+                                InlineKeyboardButton("🔍Search", url=f"https://google.com/search?q={query}Imdb")
                             ],                     
                             [
                                 InlineKeyboardButton("🎭 Reason", callback_data="spellcheck"),
