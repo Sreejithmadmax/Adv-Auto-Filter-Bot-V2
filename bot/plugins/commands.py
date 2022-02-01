@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # (c) @AlbertEinsteinTG & @Mrk_YT
+import random
 from pyrogram import filters, Client
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.methods import invite_links
