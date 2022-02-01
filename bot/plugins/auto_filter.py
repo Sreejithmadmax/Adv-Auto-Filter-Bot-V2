@@ -187,10 +187,7 @@ async def auto_filter(bot, update):
                 chat_id=update.chat.id,
                 sticker="CAACAgUAAxkBAAEByQ5h-O0PM7989UvoZrtxcvwe_lyxogACMwQAAoTT8Va9rS_EQ4gPzh4E",
                 reply_markup=InlineKeyboardMarkup(
-                        [
-                            [
-                                InlineKeyboardButton("🔍Search", url=f"https://google.com/search?q={query}")
-                            ],                     
+                        [                                
                             [
                                 InlineKeyboardButton("🎭 Reason", callback_data="spellcheck"),
                                 InlineKeyboardButton('📃 Report', url='https://t.me/UrvashiTheatersAdmin_Bot')       
