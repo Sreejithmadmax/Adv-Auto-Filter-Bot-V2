@@ -183,26 +183,10 @@ async def auto_filter(bot, update):
             )
         
     else:
-        Send_message=await bot.send_sticker(
-                chat_id=update.chat.id,
-                sticker="CAACAgUAAxkBAAEByQ5h-O0PM7989UvoZrtxcvwe_lyxogACMwQAAoTT8Va9rS_EQ4gPzh4E",
-                reply_markup=InlineKeyboardMarkup(
-                        [                                
-                            [
-                                InlineKeyboardButton("🎭 Reason", callback_data="spellcheck"),
-                                InlineKeyboardButton('📃 Report', url='https://t.me/UrvashiTheatersAdmin_Bot')       
-                            ]
-                          
-                        ]
-                    ),
-                reply_to_message_id=update.message_id
-            )
-        await asyncio.sleep(15) # in seconds
-        await Send_message.delete()
-        # await bot.delete_messages(update.chat.id,update.message_id)
-        return  # return if no files found for that query
+        return # return if no files found for that query
     
-    if len(results) == 0:   # double check
+
+    if len(results) == 0: # double check
         return
     
     else:
