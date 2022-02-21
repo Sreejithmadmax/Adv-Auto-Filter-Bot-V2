@@ -13,7 +13,7 @@ from bot.database import Database # pylint: disable=import-error
 db = Database()
 
 PHOTO = [
-    "https://telegra.ph/file/c93da57debb22739aa49f.jpg"
+    "https://telegra.ph/file/ad02486cd32420fca76ad.jpg"
 ]
 
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
