@@ -4,52 +4,40 @@
 
 class Translation(object):
     
-    START_TEXT = """<b>🙋‍♂️Hey {}!!</b>
-
-<b>Am Just A Pro Auto Filter Bot....😉</b>
-
-<b>Just Add Me To Your Group And Channel\n(👆Coming Soon👆)🔥🔥</b>
-
-<b>Press /help to know about available commands🤪</b>"""    
-    
+    START_TEXT = """<b>Hey {} 🙋‍♀️!!</b>
+<i>Am Just A Advance Auto Filter Bot....😉
+Just Add Me To Your Group And Channel And Connect Them And See My Pevers 🔥🔥😝
+For More Details Click Help Button Below..
+@CrazyBotsz
+</i>"""    
     HELP_TEXT = """
-╭────[ ᴍᴀʜᴇꜱʜ ᴀᴅʜᴏʟᴏᴋʜᴀᴍ™ ]───⍟
+╭────[✨️𝐌𝐀𝐇𝐄𝐒𝐇 𝐀𝐃𝐇𝐎𝐋𝐎𝐊𝐇𝐀𝐌™✨️]───⍟
 │
-├ /start : Cʜᴇᴄᴋ Iꜰ Aᴍ Aʟɪᴠᴇ
+├ /start : 𝐂𝐡𝐞𝐜𝐤 𝐈𝐟 𝐚𝐦 𝐀𝐥𝐢𝐯𝐞 🤖
 │
-├ /help : Mᴇ
+├ /help : 𝐇𝐞𝐥𝐩 𝐓𝐨𝐨𝐥𝐬 𝐅𝐨𝐫 𝐁𝐞𝐠𝐢𝐧𝐧𝐞𝐫𝐬 📸
 │
-├ /about : Aʙᴏᴜᴛ Mᴇ
+├ /about : 𝐀𝐛𝐨𝐮𝐭 𝐌𝐞 🏅
 │
-├ Pᴏᴡᴇʀᴇᴅ Bʏ : [<a href='https://t.me/UrvashiTheaters'>✨️ഉർവശി തീയറ്റേഴ്‌സ്✨️</a>]
+├ <b>𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 : [<a href='https://t.me/UrvashiTheaters'>✨️ഉർവശി തീയറ്റേഴ്‌സ്✨️</a>]</b>
 │
-╰──────[ Tʜᴀɴᴋ Yᴏᴜ ]───⍟
+╰──────[💞 𝐓𝐇𝐀𝐍𝐊 𝐘𝐎𝐔 💞]───⍟
 
--> Only For <b><a href="https://t.me/UrvashiTheaters">✨️ഉർവശി തീയറ്റേഴ്‌സ്✨️</a></b>
-</i>          
-
-<b><a href="https://t.me/BlinderTG">𝔹𝕝𝕚𝕟𝕕𝕖𝕣 𝕋𝔾[𝕆𝔽𝔽𝕃𝕀ℕ𝔼]🇮🇳</a></b>
 """
     
     ABOUT_TEXT = """
-╭────[ ᴍᴀʜᴇꜱʜ ᴀᴅʜᴏʟᴏᴋʜᴀᴍ™ ]───⍟
+╭────[✨️𝐌𝐀𝐇𝐄𝐒𝐇 𝐀𝐃𝐇𝐎𝐋𝐎𝐊𝐇𝐀𝐌™✨️]───⍟
 │
-├ Bᴏᴛ Nᴀᴍᴇ : [<a href='https://t.me/Autofilteropen_bot'>ᴍᴀʜᴇꜱʜ ᴀᴅʜᴏʟᴏᴋʜᴀᴍ™</a>]
+├<b>💢 Source : <a href="https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2">Source Code📃</a></b>
 │
-├ Cʜᴀɴɴᴇʟ : [<a href='https://t.me/UrvashiTheaters'>✨️ഉർവശി തീയറ്റേഴ്‌സ്✨️</a>]
+├<b>🌐 Server : <a href='https://heroku.com'>Heroku</a></b>
 │
-├ Vᴇʀsɪᴏɴ : 1.0.2.2  Bᴇᴛᴀ
+├<b>📕 Library : <a href='https://github.com/pyrogram'>Pyrogram 1.2.8</a></b>
 │
-├ Sᴏᴜʀᴄᴇ : [<a href='https://github.com/CrazyBotsz/Adv-Auto-Filter-Bot-V2'>Cʟɪᴄᴋ Hᴇʀᴇ</a>]
+├<b>㊙ Language: <a href='https://www.python.org'>Python 3.9.4</a></b>
 │
-├ Sᴇʀᴠᴇʀ : [<a href='https://www.heroku.com'>Hᴇʀᴏᴋᴜ</a>]
+├<b>👨‍💻 Developer : <a href='https://t.me/PowerOfTG'>Pσɯҽɾ Oϝ T͎͍͐￫G͎͍͐￫🇮🇳</a></b>
 │
-├ Dᴇᴠᴇʟᴏᴘᴇʀ : [<a href='https://t.me/CrazyBotsz'>Cʟɪᴄᴋ Hᴇʀᴇ</a>]
+├<b>🚸 Powered By : <a href='https://t.me/UrvashiTheaters'>✨️ഉർവശി തീയറ്റേഴ്‌സ്✨️</a></b>
 │
-├ Eᴅɪᴛɪɴɢ : [<a href='https://t.me/BlinderTG'>Cʟɪᴄᴋ Hᴇʀᴇ</a>]
-│
-├ Pᴏᴡᴇʀᴇᴅ Bʏ : [<a href='https://t.me/Movies_Club_2019'>✨️ഉർവശി തീയറ്റേഴ്‌സ്✨️</a>]
-│
-├ Cʀᴇᴅɪᴛꜱ : @Sanoob_Achu_18
-│
-╰──────[ Tʜᴀɴᴋ Yᴏᴜ ]───⍟"""
+╰──────[💞 𝐓𝐇𝐀𝐍𝐊 𝐘𝐎𝐔 💞]───⍟"""
