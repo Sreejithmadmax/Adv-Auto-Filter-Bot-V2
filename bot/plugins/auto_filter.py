@@ -183,9 +183,16 @@ async def auto_filter(bot, update):
             )
         
     else:
-        return # return if no files found for that query
+        Send_message = await bot.send_photo(
+            chat_id=update.chat.id,
+            photo="https://telegra.ph/file/5969a91b2aab7ecf9555d.jpg",
+            caption="<b>📚𝐌𝐔𝐒𝐓 𝐑𝐄𝐀𝐃📚\n\n✏️𝐅𝐨𝐫 𝐁𝐞𝐭𝐭𝐞𝐫 𝐑𝐞𝐬𝐮𝐥𝐭 𝐔𝐬𝐞 𝐓𝐡𝐢𝐬 𝐅𝐨𝐫𝐦𝐚𝐭👇\n📘 Film Name+Year Eg: Kuruthi 2021✅️\n\n😝NB:ᵁˢᵉ ᴵᴹᴰᴮ ᶠⁱˡᵐ ᴺᵃᵐᵉˢ ᶠᵒʳ ᴮᵉᵗᵗᵉʳ ᴿᵉˢᵘˡᵗ</b>",
+            reply_to_message_id=update.message_id
+        )
+        await asyncio.sleep(5)
+        await Send_message.delete()
     
-
+    
     if len(results) == 0: # double check
         return
     
