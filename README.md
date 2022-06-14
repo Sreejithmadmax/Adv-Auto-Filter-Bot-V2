@@ -108,6 +108,6 @@ Selling The Codes To Other People For Money Is *Strictly Prohibited*.
 
 ### Deploy
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sreejithmadmax/Mahesh-Adholokham)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sreejithmadmax/MaheshAuto)
 
 
